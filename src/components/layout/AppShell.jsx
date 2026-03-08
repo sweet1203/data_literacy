@@ -40,11 +40,6 @@ export default function AppShell() {
         <main className="flex-1 overflow-y-auto">
           <Outlet />
         </main>
-
-        {/* 푸터 / 저작권 */}
-        <footer className="py-3 px-4 border-t border-slate-200 bg-slate-50 text-center text-xs text-slate-500">
-          이 자료는 송석리선생님의 자료를 통해 만들었습니다. 대성여고 데이터분석 수업을 위한 사이트 입니다.
-        </footer>
       </div>
     </div>
   );

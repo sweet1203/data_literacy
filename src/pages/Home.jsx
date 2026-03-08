@@ -150,8 +150,8 @@ export default function Home() {
       </div>
 
       {/* 하단 */}
-      <div className="mt-10 text-center text-xs text-slate-400">
-        데이터 리터러시 랩 · 데이터 분석 에이전틱 수업 실습 사이트
+      <div className="mt-10 pt-6 text-center text-xs text-slate-500">
+        이 자료는 송석리선생님의 자료를 통해 만들었습니다. 대성여고 데이터분석 수업을 위한 사이트 입니다.
       </div>
     </div>
   );
