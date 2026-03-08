@@ -9,6 +9,9 @@ const iconColorMap = {
   warm: 'text-warm-600',
 };
 
+// 오렌지3 실습이 포함된 레슨 ID (사이드바에서 🍊 표시)
+const lessonsWithOrange = new Set(['4-1', '4-2', '4-3', '4-4', '5-2', '5-3', '6-1', '6-3', '6-4', '8-2', '8-3', '8-4']);
+
 export default function Sidebar({ open, onClose }) {
   const { lessonId } = useParams();
   const { isLessonCompleted, getModuleProgress } = useProgressStore();
@@ -103,7 +106,10 @@ export default function Sidebar({ open, onClose }) {
                           }`}>
                             {completed && <Icon name="check" size={12} className="text-white" />}
                           </span>
-                          <span className="truncate">{lesson.title}</span>
+                          <span className="truncate flex-1 min-w-0">{lesson.title}</span>
+                          {lessonsWithOrange.has(lesson.id) && (
+                            <span className="shrink-0" title="오렌지3 실습 포함">🍊</span>
+                          )}
                         </NavLink>
                       </li>
                     );
