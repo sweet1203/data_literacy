@@ -46,7 +46,7 @@ export default function Sidebar({ open, onClose }) {
             <circle cx="48" cy="40" r="5" fill="#dbeafe" opacity="0.5"/>
             <line x1="54" y1="46" x2="59" y2="51" stroke="#1e40af" strokeWidth="3" strokeLinecap="round"/>
           </svg>
-          <span className="font-bold text-lg text-slate-800">데이터 리터러시 랩</span>
+          <span className="font-bold text-lg text-slate-800">GOO's 데이터 분석 with 오렌지3</span>
         </NavLink>
 
         {/* 모듈 목록 */}

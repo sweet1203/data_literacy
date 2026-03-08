@@ -329,6 +329,13 @@ export default function Lesson3_3() {
         3. <strong>"그래서?"</strong> — 이 패턴이 의미하는 바는 무엇이고, 어떤 행동으로 이어질 수 있을까?
       </InfoBox>
 
+      {/* 오렌지3 실습 */}
+      <div className="mt-8 p-4 rounded-xl border-2 border-amber-200 bg-amber-50">
+        <p className="text-sm font-medium text-amber-800">
+          🍊 오렌지3 데이터분석 실습하기 — 이번 레슨 내용을 오렌지3에서 직접 실습해보세요.
+        </p>
+      </div>
+
       {/* 마무리 */}
       <div className="mt-10 p-6 bg-slate-50 rounded-xl">
         <h3 className="font-bold text-slate-800 mb-2">이번 레슨에서 배운 것</h3>

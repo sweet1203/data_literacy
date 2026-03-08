@@ -109,8 +109,15 @@ export default function Lesson8_4() {
         <br />데이터 리터러시가 있는 사람만이 ML을 올바르게 활용할 수 있습니다!
       </InfoBox>
 
+      {/* 오렌지3 실습 */}
+      <div className="mt-8 p-4 rounded-xl border-2 border-amber-200 bg-amber-50">
+        <p className="text-sm font-medium text-amber-800">
+          🍊 오렌지3 데이터분석 실습하기 — 이번 레슨 내용을 오렌지3에서 직접 실습해보세요.
+        </p>
+      </div>
+
       <div className="mt-10 p-6 bg-gradient-to-r from-primary-50 to-accent-50 rounded-xl border border-primary-200">
-        <h3 className="font-bold text-slate-800 mb-2">🎉 데이터 리터러시 랩 완주!</h3>
+        <h3 className="font-bold text-slate-800 mb-2">🎉 GOO's 데이터 분석 with 오렌지3 완주!</h3>
         <p className="text-sm text-slate-600 mb-3">
           축하합니다! 8개 모듈을 모두 학습하셨습니다. 여러분은 이제:
         </p>

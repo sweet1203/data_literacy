@@ -106,19 +106,45 @@ export const modules = [
 // 전체 레슨 수
 export const totalLessons = modules.reduce((sum, m) => sum + m.lessons.length, 0);
 
-// lessonId로 모듈과 레슨 정보 찾기
+// lessonId로 모듈과 레슨 정보 찾기 (4-1-orange 등 오렌지 실습 페이지 포함)
 export function findLesson(lessonId) {
+  const isOrange = lessonId.endsWith('-orange');
+  const baseId = isOrange ? lessonId.replace(/-orange$/, '') : lessonId;
+
   for (const mod of modules) {
-    const lesson = mod.lessons.find((l) => l.id === lessonId);
-    if (lesson) return { module: mod, lesson };
+    const lesson = mod.lessons.find((l) => l.id === baseId);
+    if (lesson) {
+      if (isOrange) {
+        return {
+          module: mod,
+          lesson: {
+            ...lesson,
+            id: lessonId,
+            title: `오렌지3 실습 (${lesson.title})`,
+            description: '오렌지3에서 직접 따라 하는 실습입니다.',
+            duration: lesson.duration,
+          },
+        };
+      }
+      return { module: mod, lesson };
+    }
   }
   return null;
 }
 
-// 이전/다음 레슨 찾기
+// 이전/다음 레슨 찾기 (오렌지 실습 페이지는 base 레슨 기준으로 prev/next)
 export function getAdjacentLessons(lessonId) {
+  const baseId = lessonId.endsWith('-orange') ? lessonId.replace(/-orange$/, '') : lessonId;
   const flat = modules.flatMap((m) => m.lessons.map((l) => ({ ...l, moduleId: m.id })));
-  const idx = flat.findIndex((l) => l.id === lessonId);
+  const idx = flat.findIndex((l) => l.id === baseId);
+  if (idx === -1) return { prev: null, next: null }
+  // 오렌지 페이지: 이전 = 본 레슨(4-1), 다음 = 다음 레슨(4-2)
+  if (lessonId.endsWith('-orange')) {
+    return {
+      prev: flat[idx],
+      next: idx < flat.length - 1 ? flat[idx + 1] : null,
+    };
+  }
   return {
     prev: idx > 0 ? flat[idx - 1] : null,
     next: idx < flat.length - 1 ? flat[idx + 1] : null,

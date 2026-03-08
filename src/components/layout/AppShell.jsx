@@ -40,7 +40,7 @@ export default function AppShell() {
             <path d="M16 33 L27 23 L38 15 L52 10" fill="none" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             <circle cx="52" cy="10" r="3" fill="#2563eb"/>
           </svg>
-          <span className="font-semibold text-slate-800">데이터 리터러시 랩</span>
+          <span className="font-semibold text-slate-800">GOO's 데이터 분석 with 오렌지3</span>
         </header>
 
         {/* 메인 콘텐츠 */}

@@ -90,6 +90,13 @@ export default function Lesson8_3() {
         </ul>
       </InfoBox>
 
+      {/* 오렌지3 실습 */}
+      <div className="mt-8 p-4 rounded-xl border-2 border-amber-200 bg-amber-50">
+        <p className="text-sm font-medium text-amber-800">
+          🍊 오렌지3 데이터분석 실습하기 — 이번 레슨 내용을 오렌지3에서 직접 실습해보세요.
+        </p>
+      </div>
+
       <div className="mt-10 p-6 bg-slate-50 rounded-xl">
         <h3 className="font-bold text-slate-800 mb-2">이번 레슨에서 배운 것</h3>
         <ul className="text-sm space-y-1 text-slate-600">

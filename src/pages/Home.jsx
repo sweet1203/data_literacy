@@ -38,7 +38,7 @@ export default function Home() {
           모두를 위한 실습 중심의 데이터 리터러시 수업!
         </div>
         <h1 className="text-4xl font-bold text-slate-800 mb-4">
-          데이터 리터러시 랩
+          GOO's 데이터 분석 with 오렌지3
         </h1>
         <p className="text-lg text-slate-500 mb-6 max-w-2xl mx-auto leading-relaxed">
           데이터를 읽고, 질문하고, 분석하고, 검증하는 힘을 키우세요.

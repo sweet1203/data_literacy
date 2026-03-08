@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import InfoBox from '../../components/common/InfoBox';
 import ExerciseBlock from '../../components/common/ExerciseBlock';
 import RevealAnswer from '../../components/common/RevealAnswer';
@@ -234,6 +235,16 @@ export default function Lesson3_1() {
         <strong>구조를 파악하고, 값의 범위를 확인하고, 이상한 점을 발견하는 것</strong>까지 포함합니다.
         이것이 데이터 리터러시의 기초입니다.
       </InfoBox>
+
+      {/* 오렌지3 실습 */}
+      <Link
+        to="/lesson/4-1-orange"
+        className="mt-8 block p-4 rounded-xl border-2 border-amber-200 bg-amber-50 hover:bg-amber-100 hover:border-amber-300 transition-colors"
+      >
+        <p className="text-sm font-medium text-amber-800">
+          🍊 오렌지3 데이터분석 실습하기 — 이번 레슨 내용을 오렌지3에서 직접 실습해보세요. (클릭하면 실습 페이지로 이동)
+        </p>
+      </Link>
 
       <div className="mt-10 p-6 bg-slate-50 rounded-xl">
         <h3 className="font-bold text-slate-800 mb-2">이번 레슨에서 배운 것</h3>

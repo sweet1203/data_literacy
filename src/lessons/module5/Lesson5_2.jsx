@@ -153,6 +153,13 @@ export default function Lesson4_2() {
         <br />3. 두 변수의 관계를 막대 차트로 그리기 (산점도가 적합)
       </InfoBox>
 
+      {/* 오렌지3 실습 */}
+      <div className="mt-8 p-4 rounded-xl border-2 border-amber-200 bg-amber-50">
+        <p className="text-sm font-medium text-amber-800">
+          🍊 오렌지3 데이터분석 실습하기 — 이번 레슨 내용을 오렌지3에서 직접 실습해보세요.
+        </p>
+      </div>
+
       <div className="mt-10 p-6 bg-slate-50 rounded-xl">
         <h3 className="font-bold text-slate-800 mb-2">이번 레슨에서 배운 것</h3>
         <ul className="text-sm space-y-1 text-slate-600">

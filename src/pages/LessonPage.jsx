@@ -8,6 +8,14 @@ import Icon from '../components/common/Icon';
 const lessonComponents = import.meta.glob('../lessons/**/Lesson*.jsx', { eager: true });
 
 function getLessonComponent(lessonId) {
+  // '4-1-orange' → module4/Lesson4_1_orange
+  if (lessonId.endsWith('-orange')) {
+    const baseId = lessonId.replace(/-orange$/, '');
+    const [modNum, lessonNum] = baseId.split('-');
+    const orangeKey = `../lessons/module${modNum}/Lesson${modNum}_${lessonNum}_orange.jsx`;
+    const orangeMod = lessonComponents[orangeKey];
+    if (orangeMod?.default) return orangeMod.default;
+  }
   // '1-1' → module1/Lesson1_1
   const [modNum, lessonNum] = lessonId.split('-');
   const key = `../lessons/module${modNum}/Lesson${modNum}_${lessonNum}.jsx`;
