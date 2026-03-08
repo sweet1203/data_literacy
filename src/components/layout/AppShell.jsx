@@ -1,9 +1,16 @@
-import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
 export default function AppShell() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const mainRef = useRef(null);
+  const location = useLocation();
+
+  // 레슨/경로가 바뀔 때 메인 스크롤 영역을 맨 위로
+  useEffect(() => {
+    mainRef.current?.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="flex h-screen">
@@ -37,7 +44,7 @@ export default function AppShell() {
         </header>
 
         {/* 메인 콘텐츠 */}
-        <main className="flex-1 overflow-y-auto">
+        <main ref={mainRef} className="flex-1 overflow-y-auto">
           <Outlet />
         </main>
       </div>

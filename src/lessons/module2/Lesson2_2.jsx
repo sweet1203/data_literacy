@@ -105,6 +105,9 @@ export default function Lesson2_2() {
             },
           ]}
         />
+        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
+          📌 질문의 답변을 리로스쿨에 제출하세요.
+        </p>
       </ExerciseBlock>
 
       {/* 마무리 */}
