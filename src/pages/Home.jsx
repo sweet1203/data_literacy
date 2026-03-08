@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { modules, totalLessons } from '../data/lessonRegistry';
 import useProgressStore from '../stores/progressStore';
@@ -25,7 +26,13 @@ const colorMap = {
   },
 };
 
+const DATA_FILES = [
+  { label: '학교 설문 데이터', file: 'school_survey_200.csv', path: '/data/school_survey_200.csv' },
+  { label: '서울 기온 데이터', file: 'seoul_temperature.csv', path: '/data/seoul_temperature.csv' },
+];
+
 export default function Home() {
+  const [downloadOpen, setDownloadOpen] = useState(false);
   const { getModuleProgress, getCompletedCount, getTotalProgress } = useProgressStore();
   const completedCount = getCompletedCount();
   const totalProgress = getTotalProgress();
@@ -46,14 +53,40 @@ export default function Home() {
           <strong className="text-slate-700">설명을 읽고 바로 실습</strong>하며 자연스럽게 익히는 인터랙티브 학습 사이트입니다.
         </p>
 
-        {/* 통계 */}
-        <div className="flex items-center justify-center gap-6 text-sm text-slate-500 mb-4">
-          <span className="inline-flex items-center gap-1"><Icon name="books" size={16} className="text-slate-400" /> {modules.length}개 모듈</span>
-          <span>·</span>
-          <span className="inline-flex items-center gap-1"><Icon name="memo" size={16} className="text-slate-400" /> {totalLessons}개 레슨</span>
-          <span>·</span>
-          <span className="inline-flex items-center gap-1"><Icon name="timer" size={16} className="text-slate-400" /> 약 {Math.round(modules.reduce((s, m) => s + m.lessons.reduce((ls, l) => ls + l.duration, 0), 0) / 60)}시간</span>
+        {/* 통계 + 자료다운받기 토글 */}
+        <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500 mb-4">
+          <div className="flex items-center gap-6">
+            <span className="inline-flex items-center gap-1"><Icon name="books" size={16} className="text-slate-400" /> {modules.length}개 모듈</span>
+            <span>·</span>
+            <span className="inline-flex items-center gap-1"><Icon name="memo" size={16} className="text-slate-400" /> {totalLessons}개 레슨</span>
+            <span>·</span>
+            <span className="inline-flex items-center gap-1"><Icon name="timer" size={16} className="text-slate-400" /> 약 {Math.round(modules.reduce((s, m) => s + m.lessons.reduce((ls, l) => ls + l.duration, 0), 0) / 60)}시간</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => setDownloadOpen((o) => !o)}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-colors"
+          >
+            <Icon name="download" size={16} className="text-slate-400" />
+            자료다운받기
+            <span className={`inline-block transition-transform ${downloadOpen ? 'rotate-180' : ''}`}>▼</span>
+          </button>
         </div>
+        {downloadOpen && (
+          <div className="flex flex-wrap items-center justify-center gap-3 py-3 px-4 rounded-xl bg-slate-50 border border-slate-200 mb-2">
+            {DATA_FILES.map(({ label, file, path }) => (
+              <a
+                key={path}
+                href={path}
+                download={file}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-primary-50 hover:border-primary-200 hover:text-primary-700 transition-colors text-sm font-medium"
+              >
+                <Icon name="download" size={18} className="text-slate-400" />
+                {label} ({file})
+              </a>
+            ))}
+          </div>
+        )}
 
         {/* 전체 진행도 */}
         {completedCount > 0 && (
