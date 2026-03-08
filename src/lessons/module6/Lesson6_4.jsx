@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import InfoBox from '../../components/common/InfoBox';
 import ExerciseBlock from '../../components/common/ExerciseBlock';
 
@@ -80,11 +81,11 @@ export default function Lesson6_4() {
       </ExerciseBlock>
 
       {/* 오렌지3 실습 */}
-      <div className="mt-8 p-4 rounded-xl border-2 border-amber-200 bg-amber-50">
+      <Link to="/lesson/6-4-orange" className="mt-8 block p-4 rounded-xl border-2 border-amber-200 bg-amber-50 hover:bg-amber-100 hover:border-amber-300 transition-colors">
         <p className="text-sm font-medium text-amber-800">
-          🍊 오렌지3 데이터분석 실습하기 — 이번 레슨 내용을 오렌지3에서 직접 실습해보세요.
+          🍊 오렌지3 데이터분석 실습하기 — 이번 레슨 내용을 오렌지3에서 직접 실습해보세요. (클릭하면 실습 페이지로 이동)
         </p>
-      </div>
+      </Link>
 
       <div className="mt-10 p-6 bg-slate-50 rounded-xl">
         <h3 className="font-bold text-slate-800 mb-2">이번 레슨에서 배운 것</h3>

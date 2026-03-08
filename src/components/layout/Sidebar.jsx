@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import { modules } from '../../data/lessonRegistry';
 import useProgressStore from '../../stores/progressStore';
@@ -12,9 +13,26 @@ const iconColorMap = {
 // 오렌지3 실습이 포함된 레슨 ID (사이드바에서 🍊 표시)
 const lessonsWithOrange = new Set(['4-1', '4-2', '4-3', '4-4', '5-2', '5-3', '6-1', '6-3', '6-4', '8-2', '8-3', '8-4']);
 
+// 오렌지 실습 모아두기 링크 목록 (lessonId-orange, 표시 제목)
+const orangePracticeLinks = [
+  { id: '4-1-orange', title: '4-1 데이터 읽기 기초' },
+  { id: '4-2-orange', title: '4-2 기초 통계 이해하기' },
+  { id: '4-3-orange', title: '4-3 패턴 찾기' },
+  { id: '4-4-orange', title: '4-4 이상치 탐정' },
+  { id: '5-2-orange', title: '5-2 올바른 차트 선택하기' },
+  { id: '5-3-orange', title: '5-3 나만의 차트 만들기' },
+  { id: '6-1-orange', title: '6-1 상관관계 놀이터' },
+  { id: '6-3-orange', title: '6-3 비교 분석' },
+  { id: '6-4-orange', title: '6-4 분석 결과 검증 5단계' },
+  { id: '8-2-orange', title: '8-2 분류 체험' },
+  { id: '8-3-orange', title: '8-3 회귀 체험' },
+  { id: '8-4-orange', title: '8-4 나의 첫 ML 프로젝트' },
+];
+
 export default function Sidebar({ open, onClose }) {
   const { lessonId } = useParams();
   const { isLessonCompleted, getModuleProgress } = useProgressStore();
+  const [orangeFolderOpen, setOrangeFolderOpen] = useState(false);
 
   return (
     <>
@@ -118,6 +136,41 @@ export default function Sidebar({ open, onClose }) {
               </div>
             );
           })}
+
+          {/* 오렌지 실습 모아두기 폴더 */}
+          <div className="mt-4 pt-4 border-t border-slate-200">
+            <button
+              type="button"
+              onClick={() => setOrangeFolderOpen((v) => !v)}
+              className="flex items-center gap-2 w-full px-3 py-2.5 rounded-lg text-sm font-semibold text-amber-700 bg-amber-50 hover:bg-amber-100 transition-colors text-left"
+            >
+              <span className="shrink-0">🍊</span>
+              <span className="flex-1 truncate">오렌지 실습 모아두기</span>
+              <span className="shrink-0 text-amber-500 text-xs">
+                {orangeFolderOpen ? '▼' : '▶'}
+              </span>
+            </button>
+            {orangeFolderOpen && (
+              <ul className="mt-1 space-y-0.5 pl-1">
+                {orangePracticeLinks.map((item) => {
+                  const isActive = lessonId === item.id;
+                  return (
+                    <li key={item.id}>
+                      <NavLink
+                        to={`/lesson/${item.id}`}
+                        onClick={onClose}
+                        className={`flex items-center gap-2 px-3 py-2 mx-1 rounded-lg text-sm transition-colors ${
+                          isActive ? 'bg-amber-100 text-amber-800 font-medium' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                        }`}
+                      >
+                        <span className="truncate flex-1 min-w-0">{item.title}</span>
+                      </NavLink>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
         </nav>
       </aside>
     </>
