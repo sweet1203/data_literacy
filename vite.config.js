@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  // GitHub Pages 사용 시: base: '/data_literacy/'
   plugins: [react(), tailwindcss()],
   server: {
     port: 4010,
