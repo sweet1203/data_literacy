@@ -124,7 +124,10 @@ export default function Sidebar({ open, onClose }) {
                           }`}>
                             {completed && <Icon name="check" size={12} className="text-white" />}
                           </span>
-                          <span className="truncate flex-1 min-w-0">{lesson.title}</span>
+                          <span className="truncate flex-1 min-w-0">
+                            <span className="text-slate-400 font-medium shrink-0 mr-1.5">{lesson.id}</span>
+                            {lesson.title}
+                          </span>
                           {lessonsWithOrange.has(lesson.id) && (
                             <span className="shrink-0" title="오렌지3 실습 포함">🍊</span>
                           )}
