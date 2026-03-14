@@ -34,9 +34,9 @@ export default function Lesson6_1_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>Correlation에서 <strong>smartphone_hours</strong>와 <strong>sleep_hours</strong>의 상관계수는 대략 얼마인가요? (소수점 둘째 자리까지)</li>
-          <li>그 r 값을 레슨 6-1 기준으로 "강한/보통/약한/거의 없음" 중 어디에 해당하는지 써 보세요.</li>
-          <li>Scatter Plot에서 점들이 대체로 어떤 모양(오른쪽 위로 올라가는지, 내려가는지, 구름 형태인지)인지 한 줄로 써 보세요.</li>
+          <li>Correlation에서 스마트폰 사용 시간과 수면 시간이 만나는 칸의 숫자(상관계수)는 대략 얼마인가요?</li>
+          <li>그 숫자를 보면 "강한 관계 / 보통 / 약한 관계 / 거의 없음" 중 어떤 느낌에 가깝나요?</li>
+          <li>산점도에서 점들이 대체로 어떻게 나열돼 있나요? (오른쪽으로 갈수록 위로 올라가나요, 내려가나요, 아니면 구름처럼만 있나요?)</li>
         </ol>
       </ExerciseBlock>
 

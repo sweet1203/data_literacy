@@ -33,9 +33,9 @@ export default function Lesson8_2_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>Tree 위젯에서 만든 트리의 <strong>맨 위(루트) 노드</strong>에 적힌 변수 이름은 무엇인가요?</li>
-          <li>그 트리를 따라갈 때, "만족도 높음"으로 결론 나오는 쪽의 조건을 한 줄로 써 보세요. (예: "sleep_hours &gt; 6.5 이고 ...")</li>
-          <li>의사결정 트리의 장점인 "해석이 쉽다"가 이 실습에서 어떻게 느껴졌는지 한 문장으로 써 보세요.</li>
+          <li>트리 그림 맨 위에 적힌 변수 이름이 뭔가요? (첫 번째로 묻는 질문이에요)</li>
+          <li>트리를 위에서 아래로 따라가면 "만족도 높음"으로 가는 쪽에는 어떤 조건이 있나요? (예: 수면 6시간 넘고 …) 한 줄로 써 보세요.</li>
+          <li>이 트리를 보니까 "스무고개처럼 이해하기 쉬웠다" 같은 느낌이 들었나요? 어떻게 느껴졌는지 한 줄 써 보세요.</li>
         </ol>
       </ExerciseBlock>
 

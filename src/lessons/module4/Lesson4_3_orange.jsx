@@ -36,9 +36,9 @@ export default function Lesson4_3_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>Scatter Plot에서 <strong>smartphone_hours</strong>(X)와 <strong>sleep_hours</strong>(Y)를 선택했을 때, 점들이 전반적으로 어떤 방향으로 붙어 있나요? (X가 커지면 Y는 커지는지, 작아지는지, 관계 없어 보이는지)</li>
-          <li>Box Plot으로 학년(grade)별 <strong>smartphone_hours</strong>를 비교했을 때, 어느 학년의 중앙값(박스 안 세로선)이 가장 큰가요?</li>
-          <li>위에서 발견한 패턴을 한 문장으로 요약해 보세요. (예: "학년이 올라갈수록 스마트폰 사용 시간이 늘어나는 경향이 있다.")</li>
+          <li>산점도에서 스마트폰 사용 시간(X)과 수면 시간(Y)을 보면, 점들이 어떻게 나열돼 있나요? (폰 많이 쓸수록 잠은 적어 보이나요, 많아 보이나요, 별 관계 없나요?)</li>
+          <li>학년별 스마트폰 사용 시간 Box Plot에서, 박스 안 세로선(중앙값)이 가장 큰 학년은 1, 2, 3학년 중 어디인가요?</li>
+          <li>오늘 본 차트들에서 "이런 느낌이 들었다"를 한 문장으로 써 보세요. (예: "학년이 올라갈수록 스마트폰 쓰는 시간이 늘어나는 것 같다.")</li>
         </ol>
       </ExerciseBlock>
 

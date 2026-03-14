@@ -32,9 +32,9 @@ export default function Lesson8_3_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>Linear Regression에서 <strong>목표 변수(Target)</strong>와 <strong>사용된 설명 변수</strong>를 각각 무엇으로 설정했는지 써 보세요.</li>
-          <li>나온 회귀식에서 <strong>기울기(계수)</strong>의 부호는 양인가요, 음인가요? 그 부호가 "X가 커지면 Y가 어떻게 변하는지"와 어떻게 맞는지 한 줄로 써 보세요.</li>
-          <li>이 모델로 "수면 8시간인 학생의 만족도"를 예측한다면 대략 몇 정도로 나오나요? (회귀식에 8을 넣어 보거나, 위젯에서 예측값을 확인해 보세요.)</li>
+          <li>Linear Regression에서 "맞추고 싶은 값(목표)"이 뭐였고, "그걸 설명하는 변수"로 뭘 넣었나요?</li>
+          <li>나온 식에서 기울기가 양수인가요, 음수인가요? 그게 "X가 커지면 Y가 커지는지, 줄어드는지"랑 어떻게 맞는지 한 줄 써 보세요.</li>
+          <li>수면 8시간인 친구의 만족도를 이 모델로 예측하면 대략 몇 점쯤 나오나요? (식에 8 넣어 보거나 위젯에서 확인해 보세요.)</li>
         </ol>
       </ExerciseBlock>
 

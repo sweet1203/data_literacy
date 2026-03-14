@@ -89,18 +89,12 @@ export default function Lesson4_1_orange() {
       {/* 과제 */}
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <p className="text-sm text-slate-600 mb-4">
-          Data Table에서 정렬·스크롤을 이용해 답을 찾고, 노트에 적어 보세요.
+          Data Table에서 정렬·스크롤로 찾아서 노트에 적어 보세요.
         </p>
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>
-            <strong>1번(id=1) 학생</strong>의 학년(grade)과 하루 스마트폰 사용 시간(smartphone_hours)은 얼마인가요?
-          </li>
-          <li>
-            <strong>수면 시간(sleep_hours)</strong>을 내림차순으로 정렬했을 때, 맨 위에 있는 학생의 수면 시간은 몇 시간인가요?
-          </li>
-          <li>
-            <strong>만족도(satisfaction)</strong>가 10인 학생은 대략 몇 명인가요? (정렬해서 10인 행이 몇 개인지 세어 보세요.)
-          </li>
+          <li>1번 학생은 몇 학년이고, 하루에 스마트폰을 몇 시간 쓰나요?</li>
+          <li>수면 시간이 가장 많은 학생은 몇 시간 자요? (수면 시간 열 클릭해서 정렬한 뒤 맨 위 값 보기)</li>
+          <li>학교생활 만족도가 10점인 친구는 몇 명이나 있나요? (만족도 열 정렬해서 10인 사람 수 세기)</li>
         </ol>
       </ExerciseBlock>
 

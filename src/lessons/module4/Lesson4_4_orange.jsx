@@ -34,9 +34,9 @@ export default function Lesson4_4_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li><strong>smartphone_hours</strong> Box Plot에서 이상치로 보이는 점이 몇 개인가요? (대략적으로)</li>
-          <li>그 중 하나를 골라, Data Table에서 해당 행을 찾아보세요. 그 학생의 <strong>수면 시간(sleep_hours)</strong>, <strong>만족도(satisfaction)</strong>는 얼마인가요?</li>
-          <li>그 값이 "입력 오류"일 수도 있고 "진짜 특이한 사례"일 수도 있다고 생각한 이유를 한 줄로 써 보세요.</li>
+          <li>스마트폰 사용 시간 Box Plot에서 박스 밖에 떨어진 점이 대략 몇 개 보이나요?</li>
+          <li>그 점 중 하나에 해당하는 학생을 Data Table에서 찾아보세요. 그 친구의 수면 시간이랑 만족도는 얼마인가요?</li>
+          <li>그 학생이 "실수로 잘못 적었을 수도 있다"와 "진짜 특이한 케이스일 수도 있다" 중 어떤 생각이 더 드나요? 이유를 한 줄로 써 보세요.</li>
         </ol>
       </ExerciseBlock>
 

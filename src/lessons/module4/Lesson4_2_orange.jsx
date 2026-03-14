@@ -39,9 +39,8 @@ export default function Lesson4_2_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>Feature Statistics에서 <strong>sleep_hours</strong>의 <strong>평균(Mean)</strong>과 <strong>중앙값(Median)</strong>을 적어 보세요. 두 값이 비슷한가요?</li>
-    
-          <li>Box Plot에서 <strong>satisfaction</strong>(만족도)을 선택했을 때, 이상치로 보이는 값이 있나요? 있다면 대략 몇 개인지 적어 보세요.</li>
+          <li>Feature Statistics에서 <strong>수면 시간(sleep_hours)</strong>의 평균과 중앙값을 적어 보세요. 두 숫자가 비슷한가요, 많이 다른가요?</li>
+          <li>Box Plot에서 <strong>만족도(satisfaction)</strong>를 선택했을 때, 박스 밖에 떨어진 점이 있나요? 있으면 대략 몇 개인지 써 보세요.</li>
         </ol>
       </ExerciseBlock>
 

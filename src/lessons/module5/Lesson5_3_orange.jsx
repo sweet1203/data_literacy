@@ -33,9 +33,9 @@ export default function Lesson5_3_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 나만의 차트 만들기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>본인이 정한 <strong>질문</strong>을 한 줄로 써 보세요.</li>
-          <li>그 질문에 맞춰 오렌지3에서 그린 <strong>차트 종류</strong>(Scatter Plot / Box Plot / Bar Chart 중 하나)와 <strong>X축·Y축에 선택한 변수</strong>를 적어 보세요.</li>
-          <li>차트를 보고 얻은 <strong>핵심 발견 한 줄</strong>을 써 보세요.</li>
+          <li>궁금해서 알아보고 싶었던 질문을 한 줄로 써 보세요. (예: 학년 올라갈수록 폰 사용 늘어날까?)</li>
+          <li>그 질문에 맞게 어떤 차트를 골랐고, 가로축·세로축에는 뭘 넣었는지 적어 보세요.</li>
+          <li>차트를 보니까 "이런 게 보인다" 하는 걸 한 줄로 써 보세요.</li>
         </ol>
       </ExerciseBlock>
 

@@ -38,9 +38,9 @@ export default function Lesson8_4_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 나의 첫 ML 워크플로 정리하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>본인이 정한 <strong>예측 문제 한 문장</strong>(무엇을 무엇으로 예측했는지)을 써 보세요.</li>
-          <li>사용한 <strong>모델 이름</strong>(Tree / Linear Regression 중 하나)과, Test and Score에서 본 <strong>평가 점수</strong>(정확도 또는 R² 등)를 적어 보세요.</li>
-          <li>ML 프로젝트 7단계 중에서, 이 실습에서 가장 시간을 많이 쓴 단계(또는 가장 중요하다고 느낀 단계) 하나와 그 이유를 한 줄로 써 보세요.</li>
+          <li>오늘 "이걸 예측해 보자"고 정한 게 뭐였는지 한 문장으로 써 보세요. (무엇을, 어떤 정보로 예측했는지)</li>
+          <li>쓴 모델(Tree / Linear Regression 중 하나)이랑, Test and Score에서 나온 점수(정확도나 R² 등)를 적어 보세요.</li>
+          <li>7단계 중에서 제일 중요하다고 느낀 단계 하나와, 그 이유를 한 줄로 써 보세요.</li>
         </ol>
       </ExerciseBlock>
 

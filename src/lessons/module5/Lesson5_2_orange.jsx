@@ -33,8 +33,8 @@ export default function Lesson5_2_orange() {
 
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>"학년별 평균 스마트폰 사용 시간 비교"를 <strong>Bar Chart</strong>와 <strong>Box Plot</strong> 둘 다 그려 본 뒤, 두 차트 중 어떤 것이 "평균만 비교"할 때, "분포까지 비교"할 때 각각 맞는지 한 줄씩 써 보세요.</li>
-          <li>"수면 시간과 만족도의 관계"를 보려고 할 때, <strong>Bar Chart</strong> 대신 <strong>Scatter Plot</strong>을 쓰는 이유를 한 문장으로 써 보세요.</li>
+          <li>막대 차트와 박스 차트 둘 다 그려 봤을 때, "학년별 평균만 비교하고 싶을 때"는 어떤 게 더 보기 좋았나요? "학년별로 값이 어떻게 퍼져 있는지까지 보고 싶을 때"는 어떤 게 더 도움이 됐나요?</li>
+          <li>수면 시간과 만족도 관계를 볼 때 왜 막대 차트보다 산점도(점 찍힌 차트)가 더 맞는 것 같았나요? 한 줄로 써 보세요.</li>
         </ol>
       </ExerciseBlock>
 
