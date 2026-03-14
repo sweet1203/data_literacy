@@ -31,7 +31,7 @@ export default function Lesson4_4_orange() {
         산점도에서 "추세와 다른 점"은 숫자 하나만 보는 박스플롯보다 <strong>두 변수의 관계</strong>를 함께 보기 때문에, 이상치를 찾기에 더 직관적일 수 있어요.
       </InfoBox>
 
-      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 살펴 보기">
+      <ExerciseBlock title="확인">
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>산점도(스마트폰 사용 시간 vs 수면 시간)에서 점들이 대체로 어떤 추세(흐름)를 보이나요? 한 줄로 정리해 보세요.</li>
           <li>그 추세와 다른 위치에 있는 점이 있나요? 있다면 대략 몇 개 쯤인지, 어느 쪽(예: 오른쪽 위, 왼쪽 아래)에 있는지 보세요. 없다면 "대부분 점이 비슷한 흐름에 모여 있다"고 정리해도 좋아요.</li>

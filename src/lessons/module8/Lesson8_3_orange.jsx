@@ -30,7 +30,7 @@ export default function Lesson8_3_orange() {
         회귀의 "기울기(a)"가 양수면 X가 커질수록 Y가 커지는 경향, 음수면 X가 커질수록 Y가 줄어드는 경향입니다. 레슨 8-3의 직선 피팅과 같은 개념입니다.
       </InfoBox>
 
-      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 살펴 보기">
+      <ExerciseBlock title="확인">
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>Linear Regression에서 "맞추고 싶은 값(목표)"이 뭐였고, "그걸 설명하는 변수"로 뭘 넣었나요?</li>
           <li>나온 식에서 기울기가 양수인가요, 음수인가요? 그게 "X가 커지면 Y가 커지는지, 줄어드는지"랑 어떻게 맞는지 적어 보세요.</li>

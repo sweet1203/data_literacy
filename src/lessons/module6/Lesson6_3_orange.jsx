@@ -31,7 +31,7 @@ export default function Lesson6_3_orange() {
         Box Plot만으로도 학년별·성별로 "어디가 더 큰지, 어떻게 퍼져 있는지"를 충분히 비교할 수 있어요. 필요하면 <strong>Select Rows</strong>로 특정 학년만 걸러 낸 뒤 <strong>Feature Statistics</strong>에 넘겨서 숫자로도 확인해 보세요.
       </p>
 
-      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 살펴 보기">
+      <ExerciseBlock title="확인">
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>학년별 운동 일수 Box Plot에서, 박스 안 세로선(중앙값)이 가장 큰 학년이랑 가장 작은 학년이 어디인가요?</li>
           <li>박스 모양이 학년마다 다르게 보이나요? (어떤 학년은 박스가 넓고, 어떤 학년은 좁다 같은 느낌) 있다면 어떻게 다른지 한 줄로 정리해 보세요.</li>

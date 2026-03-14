@@ -87,13 +87,13 @@ export default function Lesson4_1_orange() {
       </p>
 
       {/* 과제 */}
-      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 살펴 보기">
+      <ExerciseBlock title="확인">
         <p className="text-sm text-slate-600 mb-4">
           Data Table에서 정렬·스크롤로 찾아 보면서 아래를 확인해 보세요.
         </p>
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>1번 학생은 몇 학년이고, 하루에 스마트폰을 몇 시간 쓰나요?</li>
-          <li>수면 시간이 가장 많은 학생은 몇 시간 자요? (수면 시간 열 클릭해서 정렬한 뒤 맨 위 값 보기)</li>
+          <li>수면 시간이 가장 많은 학생은 몇 시간을을 자나요? (수면 시간 열 클릭해서 정렬한 뒤 맨 위 값 보기)</li>
           <li>학교생활 만족도가 10점인 친구는 몇 명이나 있나요? (만족도 열 정렬해서 10인 사람 수 세기)</li>
         </ol>
       </ExerciseBlock>

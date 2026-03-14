@@ -31,7 +31,7 @@ export default function Lesson5_3_orange() {
         그린 차트를 보고 "무엇이 보이나요?"를 한두 문장으로 정리해 보세요. (예: "3학년이 1학년보다 평균 스마트폰 사용 시간이 더 길다.")
       </p>
 
-      <ExerciseBlock title="생각해보기: 오렌지3에서 나만의 차트 만들고 정리하기">
+      <ExerciseBlock title="정리">
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>궁금해서 알아보고 싶었던 질문이 뭐였는지 한 줄로 적어 보세요. (예: 학년 올라갈수록 폰 사용 늘어날까?)</li>
           <li>그 질문에 맞게 어떤 차트를 골랐고, 가로축·세로축에는 뭘 넣었는지 적어 보세요.</li>

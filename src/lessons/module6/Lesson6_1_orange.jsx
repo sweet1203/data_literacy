@@ -32,7 +32,7 @@ export default function Lesson6_1_orange() {
         상관계수가 높다고 "원인-결과"가 아닙니다. 레슨 6-2에서 배우는 "상관 ≠ 인과"를 기억하세요.
       </InfoBox>
 
-      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 살펴 보기">
+      <ExerciseBlock title="확인">
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>Correlation에서 스마트폰 사용 시간과 수면 시간이 만나는 칸의 숫자(상관계수)는 대략 얼마인가요?</li>
           <li>그 숫자를 보면 "강한 관계 / 보통 / 약한 관계 / 거의 없음" 중 어떤 느낌에 가깝나요?</li>

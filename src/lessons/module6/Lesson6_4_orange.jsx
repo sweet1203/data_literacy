@@ -27,7 +27,7 @@ export default function Lesson6_4_orange() {
         <li><strong>5단계 대안</strong>: "다른 변수(제3변수)의 영향은 없을까?"를 한 번이라도 질문해 봤습니다.</li>
       </ol>
 
-      <ExerciseBlock title="생각해보기: 오렌지3 결과에 5단계 검증 적용해 보기">
+      <ExerciseBlock title="점검">
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>오렌지3에서 본 결과 중 "이걸 검증해 보고 싶다"고 골랐던 내용을 한 문장으로 정리해 보세요.</li>
           <li>5단계 중에서 나한테 가장 중요하게 느껴진 단계 하나와, 그 이유를 적어 보세요.</li>

@@ -36,7 +36,7 @@ export default function Lesson8_4_orange() {
         Tree를 썼다면 트리 구조를 보고 "어떤 변수가 결정에 중요한가"를 말로 정리해 보세요. Linear Regression을 썼다면 회귀식의 부호와 크기를 해석해 보세요. (7단계: 해석 및 활용)
       </p>
 
-      <ExerciseBlock title="생각해보기: 오렌지3에서 나의 첫 ML 워크플로 정리하기">
+      <ExerciseBlock title="정리">
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>오늘 "이걸 예측해 보자"고 정한 게 뭐였는지 한 문장으로 적어 보세요. (무엇을, 어떤 정보로 예측했는지)</li>
           <li>쓴 모델(Tree / Linear Regression 중 하나)이랑, Test and Score에서 나온 점수(정확도나 R² 등)를 적어 보세요.</li>
