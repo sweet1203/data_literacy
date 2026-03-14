@@ -62,11 +62,22 @@ const markdownComponents = {
       {children}
     </h3>
   ),
-  p: ({ children }) => (
-    <p className="text-slate-700 text-sm leading-relaxed mb-3 print:text-sm print:mb-2">
-      {children}
-    </p>
-  ),
+  p: ({ children }) => {
+    const text = getTextContent(children);
+    const needsParse = /\*\*[^*]*\*\*/.test(text);
+    const content = needsParse ? (
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={inlineMarkdownComponents}>
+        {text}
+      </ReactMarkdown>
+    ) : (
+      children
+    );
+    return (
+      <p className="text-slate-700 text-sm leading-relaxed mb-3 print:text-sm print:mb-2">
+        {content}
+      </p>
+    );
+  },
   ul: ({ children }) => (
     <ul className="list-disc pl-5 mb-4 space-y-1 text-slate-700 text-sm print:mb-3 print:pl-4">
       {children}
@@ -77,9 +88,18 @@ const markdownComponents = {
       {children}
     </ol>
   ),
-  li: ({ children }) => (
-    <li className="leading-relaxed print:leading-snug">{children}</li>
-  ),
+  li: ({ children }) => {
+    const text = getTextContent(children);
+    const needsParse = /\*\*[^*]*\*\*/.test(text);
+    const content = needsParse ? (
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={inlineMarkdownComponents}>
+        {text}
+      </ReactMarkdown>
+    ) : (
+      children
+    );
+    return <li className="leading-relaxed print:leading-snug">{content}</li>;
+  },
   strong: ({ children }) => (
     <strong className="font-semibold text-slate-800">{children}</strong>
   ),
