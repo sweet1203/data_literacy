@@ -2,7 +2,7 @@
 // 이모지 대신 깔끔한 벡터 아이콘을 사용합니다.
 
 const icons = {
-  // 모듈 아이콘
+  // 챕터 아이콘
   chart: (
     <>
       <rect x="3" y="12" width="4" height="9" rx="1" fill="currentColor" opacity=".4" />
@@ -175,7 +175,7 @@ export default function Icon({ name, size = 20, className = '' }) {
   );
 }
 
-// 모듈 emoji 키를 Icon name으로 매핑
+// 챕터 emoji 키를 Icon name으로 매핑
 export const moduleIconMap = {
   chart: 'chart',
   question: 'question',

@@ -112,7 +112,7 @@ export default function Lesson8_1() {
       </ExerciseBlock>
 
       <InfoBox type="tip">
-        이 모듈에서는 가장 기본적이고 많이 쓰이는 <strong>지도학습</strong>에 집중합니다.
+        이 챕터에서는 가장 기본적이고 많이 쓰이는 <strong>지도학습</strong>에 집중합니다.
         <br />다음 레슨에서 <strong>분류</strong>와 <strong>회귀</strong>를 직접 체험해봅시다!
       </InfoBox>
 

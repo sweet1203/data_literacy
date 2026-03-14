@@ -22,7 +22,7 @@ const useProgressStore = create(
 
       isLessonCompleted: (lessonId) => !!get().completedLessons[lessonId],
 
-      // 모듈 진행률 (0~1)
+      // 챕터 진행률 (0~1)
       getModuleProgress: (moduleId) => {
         const mod = modules.find((m) => m.id === moduleId);
         if (!mod) return 0;

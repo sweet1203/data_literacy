@@ -120,7 +120,7 @@ export default function Lesson8_4() {
       <div className="mt-10 p-6 bg-gradient-to-r from-primary-50 to-accent-50 rounded-xl border border-primary-200">
         <h3 className="font-bold text-slate-800 mb-2">🎉 GOO's 데이터 분석 with 오렌지3 완주!</h3>
         <p className="text-sm text-slate-600 mb-3">
-          축하합니다! 8개 모듈을 모두 학습하셨습니다. 여러분은 이제:
+          축하합니다! 8개 챕터를 모두 학습하셨습니다. 여러분은 이제:
         </p>
         <ul className="text-sm space-y-1 text-slate-600">
           <li>✅ 데이터의 정의, 종류, 품질을 이해합니다</li>

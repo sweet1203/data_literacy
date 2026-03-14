@@ -56,7 +56,7 @@ export default function Home() {
         {/* 통계 + 자료다운받기 토글 */}
         <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500 mb-4">
           <div className="flex items-center gap-6">
-            <span className="inline-flex items-center gap-1"><Icon name="books" size={16} className="text-slate-400" /> {modules.length}개 모듈</span>
+            <span className="inline-flex items-center gap-1"><Icon name="books" size={16} className="text-slate-400" /> {modules.length}개 챕터</span>
             <span>·</span>
             <span className="inline-flex items-center gap-1"><Icon name="memo" size={16} className="text-slate-400" /> {totalLessons}개 레슨</span>
             <span>·</span>
@@ -127,7 +127,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 모듈 카드 그리드 */}
+      {/* 챕터 카드 그리드 */}
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {modules.map((mod, i) => {
           const colors = colorMap[mod.color] || colorMap.primary;

@@ -1,4 +1,4 @@
-// 전체 모듈/레슨 메타데이터 (8개 모듈, 30개 레슨)
+// 전체 챕터/레슨 메타데이터 (8개 챕터, 30개 레슨)
 export const modules = [
   {
     id: 'module1',
@@ -106,7 +106,7 @@ export const modules = [
 // 전체 레슨 수
 export const totalLessons = modules.reduce((sum, m) => sum + m.lessons.length, 0);
 
-// lessonId로 모듈과 레슨 정보 찾기 (4-1-orange 등 오렌지 실습 페이지 포함)
+// lessonId로 챕터와 레슨 정보 찾기 (4-1-orange 등 오렌지 실습 페이지 포함)
 export function findLesson(lessonId) {
   const isOrange = lessonId.endsWith('-orange');
   const baseId = isOrange ? lessonId.replace(/-orange$/, '') : lessonId;

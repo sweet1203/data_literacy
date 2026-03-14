@@ -70,7 +70,7 @@ export default function Sidebar({ open, onClose }) {
           <span className="font-bold text-lg text-slate-800">GOO's 데이터 분석 with 오렌지3</span>
         </NavLink>
 
-        {/* 모듈 목록 */}
+        {/* 챕터 목록 */}
         <nav className="p-3">
           {modules.map((mod) => {
             const progress = getModuleProgress(mod.id);
@@ -78,7 +78,7 @@ export default function Sidebar({ open, onClose }) {
 
             return (
               <div key={mod.id} className="mb-2">
-                {/* 모듈 헤더 */}
+                {/* 챕터 헤더 */}
                 <div className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-slate-600 uppercase tracking-wide">
                   <Icon name={mod.icon} size={16} className={iconColorMap[mod.color] || 'text-slate-500'} />
                   <span className="flex-1 truncate">{mod.title}</span>

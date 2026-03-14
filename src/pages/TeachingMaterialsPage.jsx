@@ -13,14 +13,14 @@ import module7 from '@docs/module7_lesson_materials.md?raw';
 import module8 from '@docs/module8_lesson_materials.md?raw';
 
 const MODULES = [
-  { id: '1', title: '모듈 1: 데이터란 무엇인가', content: module1 },
-  { id: '2', title: '모듈 2: 질문을 설계하라', content: module2 },
-  { id: '3', title: '모듈 3: 데이터는 어디서 오는가', content: module3 },
-  { id: '4', title: '모듈 4: 데이터 탐색하기', content: module4 },
-  { id: '5', title: '모듈 5: 시각화로 이야기하기', content: module5 },
-  { id: '6', title: '모듈 6: 분석하고 검증하기', content: module6 },
-  { id: '7', title: '모듈 7: AI 활용과 데이터 윤리', content: module7 },
-  { id: '8', title: '모듈 8: 미니 ML 실험실', content: module8 },
+  { id: '1', title: '챕터 1: 데이터란 무엇인가', content: module1 },
+  { id: '2', title: '챕터 2: 질문을 설계하라', content: module2 },
+  { id: '3', title: '챕터 3: 데이터는 어디서 오는가', content: module3 },
+  { id: '4', title: '챕터 4: 데이터 탐색하기', content: module4 },
+  { id: '5', title: '챕터 5: 시각화로 이야기하기', content: module5 },
+  { id: '6', title: '챕터 6: 분석하고 검증하기', content: module6 },
+  { id: '7', title: '챕터 7: AI 활용과 데이터 윤리', content: module7 },
+  { id: '8', title: '챕터 8: 미니 ML 실험실', content: module8 },
 ];
 
 // 인쇄·화면 모두 보기 좋은 마크다운 스타일
@@ -150,7 +150,7 @@ export default function TeachingMaterialsPage() {
                     : 'text-slate-600 hover:bg-slate-100'
                 }`}
               >
-                모듈 {m.id}
+                챕터 {m.id}
               </button>
             ))}
           </aside>
