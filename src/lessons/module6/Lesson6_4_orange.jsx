@@ -33,9 +33,6 @@ export default function Lesson6_4_orange() {
           <li>5단계 중에서 <strong>가장 중요하다고 생각한 단계 하나</strong>와, 그 이유를 한 줄로 써 보세요.</li>
           <li>그 결과를 "믿어도 된다"고 볼 수 있는지, "주의해야 한다"고 볼 수 있는지 판단하고, 그 이유를 한 문장으로 써 보세요.</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

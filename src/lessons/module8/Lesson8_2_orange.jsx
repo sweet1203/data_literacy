@@ -37,9 +37,6 @@ export default function Lesson8_2_orange() {
           <li>그 트리를 따라갈 때, "만족도 높음"으로 결론 나오는 쪽의 조건을 한 줄로 써 보세요. (예: "sleep_hours &gt; 6.5 이고 ...")</li>
           <li>의사결정 트리의 장점인 "해석이 쉽다"가 이 실습에서 어떻게 느껴졌는지 한 문장으로 써 보세요.</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

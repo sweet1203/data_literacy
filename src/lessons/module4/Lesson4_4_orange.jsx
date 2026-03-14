@@ -38,9 +38,6 @@ export default function Lesson4_4_orange() {
           <li>그 중 하나를 골라, Data Table에서 해당 행을 찾아보세요. 그 학생의 <strong>수면 시간(sleep_hours)</strong>, <strong>만족도(satisfaction)</strong>는 얼마인가요?</li>
           <li>그 값이 "입력 오류"일 수도 있고 "진짜 특이한 사례"일 수도 있다고 생각한 이유를 한 줄로 써 보세요.</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

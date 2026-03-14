@@ -36,9 +36,6 @@ export default function Lesson5_2_orange() {
           <li>"학년별 평균 스마트폰 사용 시간 비교"를 <strong>Bar Chart</strong>와 <strong>Box Plot</strong> 둘 다 그려 본 뒤, 두 차트 중 어떤 것이 "평균만 비교"할 때, "분포까지 비교"할 때 각각 맞는지 한 줄씩 써 보세요.</li>
           <li>"수면 시간과 만족도의 관계"를 보려고 할 때, <strong>Bar Chart</strong> 대신 <strong>Scatter Plot</strong>을 쓰는 이유를 한 문장으로 써 보세요.</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

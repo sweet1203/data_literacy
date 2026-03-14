@@ -102,9 +102,6 @@ export default function Lesson2_1() {
           일상의 궁금증을 3단계로 변환해보세요. 마지막에 품질 체크도 해보세요!
         </p>
         <QuestionBuilder examples={transformExamples} />
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       {/* 마무리 */}

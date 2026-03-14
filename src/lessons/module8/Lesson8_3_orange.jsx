@@ -36,9 +36,6 @@ export default function Lesson8_3_orange() {
           <li>나온 회귀식에서 <strong>기울기(계수)</strong>의 부호는 양인가요, 음인가요? 그 부호가 "X가 커지면 Y가 어떻게 변하는지"와 어떻게 맞는지 한 줄로 써 보세요.</li>
           <li>이 모델로 "수면 8시간인 학생의 만족도"를 예측한다면 대략 몇 정도로 나오나요? (회귀식에 8을 넣어 보거나, 위젯에서 예측값을 확인해 보세요.)</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

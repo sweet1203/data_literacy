@@ -42,9 +42,6 @@ export default function Lesson8_4_orange() {
           <li>사용한 <strong>모델 이름</strong>(Tree / Linear Regression 중 하나)과, Test and Score에서 본 <strong>평가 점수</strong>(정확도 또는 R² 등)를 적어 보세요.</li>
           <li>ML 프로젝트 7단계 중에서, 이 실습에서 가장 시간을 많이 쓴 단계(또는 가장 중요하다고 느낀 단계) 하나와 그 이유를 한 줄로 써 보세요.</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

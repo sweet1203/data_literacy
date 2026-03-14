@@ -37,9 +37,6 @@ export default function Lesson5_3_orange() {
           <li>그 질문에 맞춰 오렌지3에서 그린 <strong>차트 종류</strong>(Scatter Plot / Box Plot / Bar Chart 중 하나)와 <strong>X축·Y축에 선택한 변수</strong>를 적어 보세요.</li>
           <li>차트를 보고 얻은 <strong>핵심 발견 한 줄</strong>을 써 보세요.</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

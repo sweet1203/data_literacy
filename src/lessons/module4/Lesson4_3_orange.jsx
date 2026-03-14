@@ -40,9 +40,6 @@ export default function Lesson4_3_orange() {
           <li>Box Plot으로 학년(grade)별 <strong>smartphone_hours</strong>를 비교했을 때, 어느 학년의 중앙값(박스 안 세로선)이 가장 큰가요?</li>
           <li>위에서 발견한 패턴을 한 문장으로 요약해 보세요. (예: "학년이 올라갈수록 스마트폰 사용 시간이 늘어나는 경향이 있다.")</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

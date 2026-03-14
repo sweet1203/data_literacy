@@ -38,9 +38,6 @@ export default function Lesson6_1_orange() {
           <li>그 r 값을 레슨 6-1 기준으로 "강한/보통/약한/거의 없음" 중 어디에 해당하는지 써 보세요.</li>
           <li>Scatter Plot에서 점들이 대체로 어떤 모양(오른쪽 위로 올라가는지, 내려가는지, 구름 형태인지)인지 한 줄로 써 보세요.</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">

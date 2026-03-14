@@ -89,7 +89,7 @@ export default function Lesson4_1_orange() {
       {/* 과제 */}
       <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
         <p className="text-sm text-slate-600 mb-4">
-          Data Table에서 정렬·스크롤을 이용해 답을 찾고, 노트나 리로스쿨에 적어 제출하세요.
+          Data Table에서 정렬·스크롤을 이용해 답을 찾고, 노트에 적어 보세요.
         </p>
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>
@@ -102,9 +102,6 @@ export default function Lesson4_1_orange() {
             <strong>만족도(satisfaction)</strong>가 10인 학생은 대략 몇 명인가요? (정렬해서 10인 행이 몇 개인지 세어 보세요.)
           </li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 위 과제 답을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       {/* 돌아가기 */}

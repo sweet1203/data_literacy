@@ -37,9 +37,6 @@ export default function Lesson6_3_orange() {
           <li>같은 Box Plot에서 "평균은 비슷한데 분포가 다른" 두 학년이 있나요? 있다면 어떤 학년들이고, 어떻게 다른지 한 줄로 써 보세요.</li>
           <li>레슨 6-3에서 배운 "평균만 보지 말고 분포를 보라"는 말이, 이 실습에서 어떻게 드러났는지 한 문장으로 써 보세요.</li>
         </ol>
-        <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-medium text-primary-700">
-          📌 질문의 답변을 리로스쿨에 제출하세요.
-        </p>
       </ExerciseBlock>
 
       <div className="mt-10 pt-6 border-t border-slate-200">
