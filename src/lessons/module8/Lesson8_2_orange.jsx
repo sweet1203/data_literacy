@@ -6,7 +6,7 @@ export default function Lesson8_2_orange() {
   return (
     <div className="space-y-6 text-slate-700 leading-relaxed">
       <p className="text-lg">
-        레슨 8-2에서 배운 <strong>분류(Classification)</strong>와 <strong>의사결정 트리</strong>를 오렌지3 <strong>Tree</strong> 위젯으로 체험합니다. 학교 설문 데이터로 "성적만족도(높음/낮음)"를 분류하는 트리 모델을 만들어 보세요.
+        레슨 8-2에서 배운 <strong>분류(Classification)</strong>와 <strong>의사결정 트리</strong>를 오렌지3 <strong>Tree</strong> 위젯으로 체험합니다. 학교 설문 데이터로 "학교생활 만족도(높음/낮음)"를 분류하는 트리 모델을 만들어 보세요.
       </p>
 
       <InfoBox type="key">
@@ -31,11 +31,11 @@ export default function Lesson8_2_orange() {
         트리의 각 노드는 "변수 &gt; 값" 같은 조건입니다. 맨 위에서부터 따라가면 "수면 시간이 7시간 이상이면 만족도 높음" 같은 규칙이 보일 수 있습니다. 레슨 8-2에서 배운 "스무고개"처럼 순서대로 질문하는 구조임을 확인하세요.
       </p>
 
-      <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
+      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 한번 생각해 보기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>트리 그림 맨 위에 적힌 변수 이름이 뭔가요? (첫 번째로 묻는 질문이에요)</li>
-          <li>트리를 위에서 아래로 따라가면 "만족도 높음"으로 가는 쪽에는 어떤 조건이 있나요? (예: 수면 6시간 넘고 …) 한 줄로 써 보세요.</li>
-          <li>이 트리를 보니까 "스무고개처럼 이해하기 쉬웠다" 같은 느낌이 들었나요? 어떻게 느껴졌는지 한 줄 써 보세요.</li>
+          <li>트리 그림 맨 위에 적힌 변수 이름이 뭔가요? (첫 번째로 묻는 질문이에요) 한번 확인해 보세요.</li>
+          <li>트리를 위에서 아래로 따라가면 "만족도 높음"으로 가는 쪽에는 어떤 조건이 있나요? (예: 수면 6시간 넘고 …) 한번 생각해 보세요.</li>
+          <li>이 트리를 보니까 "스무고개처럼 이해하기 쉬웠다" 같은 느낌이 들었나요? 어떻게 느껴졌는지 한번 정리해 보세요.</li>
         </ol>
       </ExerciseBlock>
 

@@ -6,16 +6,16 @@ export default function Lesson6_4_orange() {
   return (
     <div className="space-y-6 text-slate-700 leading-relaxed">
       <p className="text-lg">
-        레슨 6-4에서 배운 <strong>분석 결과 검증 5단계</strong>(숫자→시각화→상식→민감도→대안)를, 오렌지3에서 만든 결과에 적용해 봅니다. Correlation·Box Plot·Statistics 결과 중 하나를 골라 5단계 체크리스트로 점검하세요.
+        레슨 6-4에서 배운 <strong>분석 결과 검증 5단계</strong>(숫자→시각화→상식→민감도→대안)를, 오렌지3에서 만든 결과에 적용해 봅니다. Correlation·Box Plot·Feature Statistics 결과 중 하나를 골라 5단계 체크리스트로 점검하세요.
       </p>
 
       <InfoBox type="key">
-        <strong>준비</strong>: 6-1 오렌지 실습처럼 Data Table에 데이터가 연결되어 있고, <strong>Correlation</strong> 또는 <strong>Box Plot</strong>, <strong>Statistics</strong> 중 최소 하나를 이미 연결해 둔 상태에서 시작하세요.
+        <strong>준비</strong>: 6-1 오렌지 실습처럼 Data Table에 데이터가 연결되어 있고, <strong>Correlation</strong> 또는 <strong>Box Plot</strong>, <strong>Feature Statistics</strong> 중 최소 하나를 이미 연결해 둔 상태에서 시작하세요.
       </InfoBox>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 검증할 "결과" 하나 정하기</h2>
       <p className="text-sm">
-        예: "smartphone_hours와 sleep_hours의 상관계수는 -0.3이다", "3학년의 평균 스마트폰 사용 시간이 1학년보다 크다" 등, 오렌지3에서 본 숫자나 비교 결과를 한 문장으로 적어 보세요.
+        예: "smartphone_hours와 sleep_hours의 상관계수는 -0.3이다", "3학년의 평균 스마트폰 사용 시간이 1학년보다 크다" 등, 오렌지3에서 본 숫자나 비교 결과를 한 문장으로 한번 정리해 보세요.
       </p>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: 5단계 검증 체크리스트 적용</h2>
@@ -27,11 +27,11 @@ export default function Lesson6_4_orange() {
         <li><strong>5단계 대안</strong>: "다른 변수(제3변수)의 영향은 없을까?"를 한 번이라도 질문해 봤습니다.</li>
       </ol>
 
-      <ExerciseBlock title="과제: 오렌지3 결과에 5단계 검증 적용하기">
+      <ExerciseBlock title="생각해보기: 오렌지3 결과에 5단계 검증 적용해 보기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>오렌지3에서 본 결과 중 "이걸 검증해 보고 싶다"고 골랐던 내용을 한 문장으로 써 보세요.</li>
-          <li>5단계 중에서 나한테 가장 중요하게 느껴진 단계 하나와, 그 이유를 한 줄로 써 보세요.</li>
-          <li>그 결과를 "괜찮게 믿어도 될 것 같다" vs "조금 주의해서 봐야 할 것 같다" 중 하나로 골라 보고, 왜 그렇게 생각했는지 한 줄 써 보세요.</li>
+          <li>오렌지3에서 본 결과 중 "이걸 검증해 보고 싶다"고 골랐던 내용을 한 문장으로 한번 정리해 보세요.</li>
+          <li>5단계 중에서 나한테 가장 중요하게 느껴진 단계 하나와, 그 이유를 한번 생각해 보세요.</li>
+          <li>그 결과를 "괜찮게 믿어도 될 것 같다" vs "조금 주의해서 봐야 할 것 같다" 중 하나로 골라 보고, 왜 그렇게 생각했는지 한번 정리해 보세요.</li>
         </ol>
       </ExerciseBlock>
 

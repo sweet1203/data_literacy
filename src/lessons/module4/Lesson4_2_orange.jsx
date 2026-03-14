@@ -30,17 +30,17 @@ export default function Lesson4_2_orange() {
         <li>Distributions를 더블 클릭한 뒤, 왼쪽에서 변수(예: sleep_hours)를 선택하면 <strong>히스토그램(분포)</strong>이 나타납니다. 값이 어떻게 퍼져 있는지 확인하세요.</li>
       </ol>
 
-      <h2 className="text-xl font-bold text-slate-800 mt-8">3단계: Box Plot으로 대표값·이상치 확인</h2>
+      <h2 className="text-xl font-bold text-slate-800 mt-8">3단계: Box Plot으로 대표값·퍼짐 보기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
         <li><strong>Visualize</strong> 그룹에서 <strong>Box Plot</strong> 위젯을 캔버스에 놓습니다.</li>
         <li>Data Table → Box Plot으로 연결합니다.</li>
-        <li>Box Plot을 더블 클릭하고, 표시할 변수를 선택합니다. 박스 안의 선이 <strong>중앙값</strong>, 박스가 사분위 범위, 점이 <strong>이상치</strong> 후보임을 확인하세요.</li>
+        <li>Box Plot을 더블 클릭하고, 표시할 변수를 바꿔 가며 선택해 보세요. 박스 안의 세로선이 <strong>중앙값</strong>, 박스가 값이 몰려 있는 구간(사분위 범위)입니다. 이 데이터에서는 박스 밖에 떨어진 점이 거의 없을 수 있어요.</li>
       </ol>
 
-      <ExerciseBlock title="과제: 오렌지3에서 아래 질문에 답하기">
+      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 한번 생각해 보기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>Feature Statistics에서 <strong>수면 시간(sleep_hours)</strong>의 평균과 중앙값을 적어 보세요. 두 숫자가 비슷한가요, 많이 다른가요?</li>
-          <li>Box Plot에서 <strong>만족도(satisfaction)</strong>를 선택했을 때, 박스 밖에 떨어진 점이 있나요? 있으면 대략 몇 개인지 써 보세요.</li>
+          <li>Feature Statistics에서 <strong>수면 시간(sleep_hours)</strong>의 평균과 중앙값을 확인해 보세요. 두 숫자가 비슷한가요, 많이 다른가요? 한번 생각해 보세요.</li>
+          <li>Box Plot에서 <strong>수면 시간</strong>과 <strong>스마트폰 사용 시간</strong>을 각각 선택해 보세요. 박스 안 세로선(중앙값)이 더 큰 쪽은 어느 변수인가요? 박스(몸통)가 더 넓게 퍼져 보이는 쪽은 어느 변수인가요? 한번 생각해 보세요.</li>
         </ol>
       </ExerciseBlock>
 

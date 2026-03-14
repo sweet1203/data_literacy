@@ -15,7 +15,7 @@ export default function Lesson8_4_orange() {
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 문제 정의와 데이터 연결</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>문제</strong>: 예를 들어 "수면 시간·스마트폰 사용으로 성적 만족도(또는 학년)를 예측할 수 있을까?"로 정합니다.</li>
+        <li><strong>문제</strong>: 예를 들어 "수면 시간·스마트폰 사용으로 학교생활 만족도(또는 학년)를 예측할 수 있을까?"로 정합니다.</li>
         <li>File → Data Table로 <strong>school_survey_200.csv</strong>를 불러와 연결합니다. (1~2단계: 문제 정의, 데이터 수집·탐색)</li>
       </ol>
 
@@ -36,11 +36,11 @@ export default function Lesson8_4_orange() {
         Tree를 썼다면 트리 구조를 보고 "어떤 변수가 결정에 중요한가"를 말로 정리해 보세요. Linear Regression을 썼다면 회귀식의 부호와 크기를 해석해 보세요. (7단계: 해석 및 활용)
       </p>
 
-      <ExerciseBlock title="과제: 오렌지3에서 나의 첫 ML 워크플로 정리하기">
+      <ExerciseBlock title="생각해보기: 오렌지3에서 나의 첫 ML 워크플로 정리하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>오늘 "이걸 예측해 보자"고 정한 게 뭐였는지 한 문장으로 써 보세요. (무엇을, 어떤 정보로 예측했는지)</li>
-          <li>쓴 모델(Tree / Linear Regression 중 하나)이랑, Test and Score에서 나온 점수(정확도나 R² 등)를 적어 보세요.</li>
-          <li>7단계 중에서 제일 중요하다고 느낀 단계 하나와, 그 이유를 한 줄로 써 보세요.</li>
+          <li>오늘 "이걸 예측해 보자"고 정한 게 뭐였는지 한 문장으로 한번 정리해 보세요. (무엇을, 어떤 정보로 예측했는지)</li>
+          <li>쓴 모델(Tree / Linear Regression 중 하나)이랑, Test and Score에서 나온 점수(정확도나 R² 등)를 한번 확인해 보세요.</li>
+          <li>7단계 중에서 제일 중요하다고 느낀 단계 하나와, 그 이유를 한번 생각해 보세요.</li>
         </ol>
       </ExerciseBlock>
 
