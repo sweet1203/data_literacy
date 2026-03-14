@@ -1,6 +1,16 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+
+// 셀 내용에서 텍스트만 추출 (표 셀 내 ** 미파싱 시 재렌더용)
+function getTextContent(node) {
+  if (node == null) return '';
+  if (typeof node === 'string') return node;
+  if (Array.isArray(node)) return node.map(getTextContent).join('');
+  if (React.isValidElement(node) && node.props?.children != null) return getTextContent(node.props.children);
+  return '';
+}
 
 // 레슨 요약 md를 raw 텍스트로 불러옵니다.
 import module1 from '@docs/module1_lesson_materials.md?raw';
@@ -22,6 +32,12 @@ const MODULES = [
   { id: '7', title: '챕터 7: AI 활용과 데이터 윤리', content: module7 },
   { id: '8', title: '챕터 8: 미니 ML 실험실', content: module8 },
 ];
+
+// 표 셀 등 인라인만 렌더할 때 사용 (p 래퍼 제거)
+const inlineMarkdownComponents = {
+  p: ({ children }) => <>{children}</>,
+  strong: ({ children }) => <strong className="font-semibold text-slate-800">{children}</strong>,
+};
 
 // 인쇄·화면 모두 보기 좋은 마크다운 스타일
 const markdownComponents = {
@@ -83,16 +99,38 @@ const markdownComponents = {
       {children}
     </tr>
   ),
-  th: ({ children }) => (
-    <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-800 print:px-2 print:py-1.5">
-      {children}
-    </th>
-  ),
-  td: ({ children }) => (
-    <td className="border border-slate-200 px-3 py-2 text-slate-700 print:px-2 print:py-1.5">
-      {children}
-    </td>
-  ),
+  th: ({ children }) => {
+    const text = getTextContent(children);
+    const needsParse = typeof text === 'string' && /\*\*[^*]*\*\*/.test(text);
+    const content = needsParse ? (
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={inlineMarkdownComponents}>
+        {text}
+      </ReactMarkdown>
+    ) : (
+      children
+    );
+    return (
+      <th className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-800 print:px-2 print:py-1.5">
+        {content}
+      </th>
+    );
+  },
+  td: ({ children }) => {
+    const text = getTextContent(children);
+    const needsParse = typeof text === 'string' && /\*\*[^*]*\*\*/.test(text);
+    const content = needsParse ? (
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={inlineMarkdownComponents}>
+        {text}
+      </ReactMarkdown>
+    ) : (
+      children
+    );
+    return (
+      <td className="border border-slate-200 px-3 py-2 text-slate-700 print:px-2 print:py-1.5">
+        {content}
+      </td>
+    );
+  },
   hr: () => <hr className="my-6 border-slate-200 print:my-4 print:break-before-auto" />,
   blockquote: ({ children }) => (
     <blockquote className="pl-4 border-l-4 border-primary-300 text-slate-600 text-sm my-3 print:my-2">
@@ -161,7 +199,7 @@ export default function TeachingMaterialsPage() {
                   {selected.title}
                 </h2>
                 <div className="lesson-markdown text-slate-700">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={markdownComponents}>
                     {selected.content}
                   </ReactMarkdown>
                 </div>
