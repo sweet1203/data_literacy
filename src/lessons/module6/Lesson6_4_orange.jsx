@@ -15,7 +15,7 @@ export default function Lesson6_4_orange() {
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 검증할 "결과" 하나 정하기</h2>
       <p className="text-sm">
-        예: "smartphone_hours와 sleep_hours의 상관계수는 -0.3이다", "3학년의 평균 스마트폰 사용 시간이 1학년보다 크다" 등, 오렌지3에서 본 숫자나 비교 결과를 한 문장으로 한번 정리해 보세요.
+        예: "smartphone_hours와 sleep_hours의 상관계수는 -0.3이다", "3학년의 평균 스마트폰 사용 시간이 1학년보다 크다" 등, 오렌지3에서 본 숫자나 비교 결과를 한 문장으로 정리해 보세요.
       </p>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: 5단계 검증 체크리스트 적용</h2>
@@ -29,9 +29,9 @@ export default function Lesson6_4_orange() {
 
       <ExerciseBlock title="생각해보기: 오렌지3 결과에 5단계 검증 적용해 보기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>오렌지3에서 본 결과 중 "이걸 검증해 보고 싶다"고 골랐던 내용을 한 문장으로 한번 정리해 보세요.</li>
-          <li>5단계 중에서 나한테 가장 중요하게 느껴진 단계 하나와, 그 이유를 한번 생각해 보세요.</li>
-          <li>그 결과를 "괜찮게 믿어도 될 것 같다" vs "조금 주의해서 봐야 할 것 같다" 중 하나로 골라 보고, 왜 그렇게 생각했는지 한번 정리해 보세요.</li>
+          <li>오렌지3에서 본 결과 중 "이걸 검증해 보고 싶다"고 골랐던 내용을 한 문장으로 정리해 보세요.</li>
+          <li>5단계 중에서 나한테 가장 중요하게 느껴진 단계 하나와, 그 이유를 적어 보세요.</li>
+          <li>그 결과를 "괜찮게 믿어도 될 것 같다" vs "조금 주의해서 봐야 할 것 같다" 중 하나로 골라 보고, 왜 그렇게 생각했는지 한 줄로 적어 보세요.</li>
         </ol>
       </ExerciseBlock>
 

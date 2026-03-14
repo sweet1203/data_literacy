@@ -87,9 +87,9 @@ export default function Lesson4_1_orange() {
       </p>
 
       {/* 과제 */}
-      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 한번 생각해 보기">
+      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 살펴 보기">
         <p className="text-sm text-slate-600 mb-4">
-          Data Table에서 정렬·스크롤로 찾아 보면서 아래를 한번 생각해 보세요.
+          Data Table에서 정렬·스크롤로 찾아 보면서 아래를 확인해 보세요.
         </p>
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>1번 학생은 몇 학년이고, 하루에 스마트폰을 몇 시간 쓰나요?</li>

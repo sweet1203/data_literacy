@@ -7,7 +7,7 @@ export default function Lesson4_2_orange() {
     <div className="space-y-6 text-slate-700 leading-relaxed">
       <p className="text-lg">
         레슨 4-2에서 배운 <strong>평균, 중앙값, 퍼짐(Dispersion)</strong>을 오렌지3에서 직접 확인해 봅니다.
-        <strong>Feature Statistics</strong> 위젯과 <strong>Distributions</strong>, <strong>Box Plot</strong>으로 데이터의 대표값과 퍼짐을 살펴보세요.
+        <strong>Feature Statistics</strong> 위젯과 <strong>Distributions</strong>, <strong>Box Plot</strong>으로 데이터의 대표값과 퍼짐을 살펴 보세요.
       </p>
 
       <InfoBox type="key">
@@ -37,10 +37,10 @@ export default function Lesson4_2_orange() {
         <li>Box Plot을 더블 클릭하고, 표시할 변수를 바꿔 가며 선택해 보세요. 박스 안의 세로선이 <strong>중앙값</strong>, 박스가 값이 몰려 있는 구간(사분위 범위)입니다. 이 데이터에서는 박스 밖에 떨어진 점이 거의 없을 수 있어요.</li>
       </ol>
 
-      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 한번 생각해 보기">
+      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 살펴 보기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>Feature Statistics에서 <strong>수면 시간(sleep_hours)</strong>의 평균과 중앙값을 확인해 보세요. 두 숫자가 비슷한가요, 많이 다른가요? 한번 생각해 보세요.</li>
-          <li>Box Plot에서 <strong>수면 시간</strong>과 <strong>스마트폰 사용 시간</strong>을 각각 선택해 보세요. 박스 안 세로선(중앙값)이 더 큰 쪽은 어느 변수인가요? 박스(몸통)가 더 넓게 퍼져 보이는 쪽은 어느 변수인가요? 한번 생각해 보세요.</li>
+          <li>Feature Statistics에서 <strong>수면 시간(sleep_hours)</strong>의 평균(Mean)과 중앙값(Median)을 보세요. 두 값이 비슷한가요, 아니면 차이가 나나요?</li>
+          <li>Box Plot에서 <strong>수면 시간</strong>과 <strong>스마트폰 사용 시간</strong>을 각각 선택해 보세요. 박스 안 세로선(중앙값)이 더 큰 쪽은 어느 변수인가요? 박스(몸통)가 더 넓게 퍼져 보이는 쪽은 어느 변수인가요?</li>
         </ol>
       </ExerciseBlock>
 

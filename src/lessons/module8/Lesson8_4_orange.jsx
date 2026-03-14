@@ -38,9 +38,9 @@ export default function Lesson8_4_orange() {
 
       <ExerciseBlock title="생각해보기: 오렌지3에서 나의 첫 ML 워크플로 정리하기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>오늘 "이걸 예측해 보자"고 정한 게 뭐였는지 한 문장으로 한번 정리해 보세요. (무엇을, 어떤 정보로 예측했는지)</li>
-          <li>쓴 모델(Tree / Linear Regression 중 하나)이랑, Test and Score에서 나온 점수(정확도나 R² 등)를 한번 확인해 보세요.</li>
-          <li>7단계 중에서 제일 중요하다고 느낀 단계 하나와, 그 이유를 한번 생각해 보세요.</li>
+          <li>오늘 "이걸 예측해 보자"고 정한 게 뭐였는지 한 문장으로 적어 보세요. (무엇을, 어떤 정보로 예측했는지)</li>
+          <li>쓴 모델(Tree / Linear Regression 중 하나)이랑, Test and Score에서 나온 점수(정확도나 R² 등)를 적어 보세요.</li>
+          <li>7단계 중에서 제일 중요하다고 느낀 단계 하나와, 그 이유를 적어 보세요.</li>
         </ol>
       </ExerciseBlock>
 

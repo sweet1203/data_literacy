@@ -31,10 +31,10 @@ export default function Lesson5_2_orange() {
         <li><strong>Distributions</strong> 위젯으로 <strong>satisfaction</strong>(만족도) 분포를 히스토그램으로 그려 보세요. "만족도가 어떻게 퍼져 있는가"를 보는 데는 분포 차트가 적합합니다.</li>
       </ol>
 
-      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 한번 생각해 보기">
+      <ExerciseBlock title="생각해보기: 오렌지3에서 아래를 살펴 보기">
         <ol className="list-decimal list-inside space-y-3 text-sm">
-          <li>막대 차트와 박스 차트 둘 다 그려 봤을 때, "학년별 평균만 비교하고 싶을 때"는 어떤 게 더 보기 좋았나요? "학년별로 값이 어떻게 퍼져 있는지까지 보고 싶을 때"는 어떤 게 더 도움이 됐나요? 한번 생각해 보세요.</li>
-          <li>수면 시간과 만족도 관계를 볼 때 왜 막대 차트보다 산점도(점 찍힌 차트)가 더 맞는 것 같았나요? 한번 생각해 보세요.</li>
+          <li>막대 차트와 박스 차트 둘 다 그려 봤을 때, "학년별 평균만 비교하고 싶을 때"는 어떤 게 더 보기 좋았나요? "학년별로 값이 어떻게 퍼져 있는지까지 보고 싶을 때"는 어떤 게 더 도움이 됐나요?</li>
+          <li>수면 시간과 만족도 관계를 볼 때 왜 막대 차트보다 산점도(점 찍힌 차트)가 더 맞는 것 같았나요?</li>
         </ol>
       </ExerciseBlock>
 
