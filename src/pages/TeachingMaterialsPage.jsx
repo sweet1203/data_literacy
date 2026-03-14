@@ -195,8 +195,8 @@ export default function TeachingMaterialsPage() {
             </a>
           </div>
         </header>
-        <div className="flex-1 flex overflow-hidden">
-          <aside className="w-56 bg-white border-r border-slate-200 overflow-y-auto p-2 print:hidden shrink-0">
+        <div className="flex-1 flex min-h-0 overflow-y-auto">
+          <aside className="w-56 bg-white border-r border-slate-200 overflow-y-auto p-2 print:hidden shrink-0 sticky top-0 self-start max-h-[calc(100vh-3.5rem)]">
             {MODULES.map((m) => (
               <button
                 key={m.id}
@@ -212,7 +212,7 @@ export default function TeachingMaterialsPage() {
               </button>
             ))}
           </aside>
-          <main className="flex-1 overflow-y-auto p-6 print:p-0 print:overflow-visible">
+          <main className="flex-1 min-w-0 p-6 print:p-0">
             <div className="max-w-4xl mx-auto print:max-w-none print-content">
               <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 print:shadow-none print:border-0 print:rounded-none print:bg-white">
                 <h2 className="text-xl font-bold text-slate-800 mb-6 print:mb-4 print:text-lg">
