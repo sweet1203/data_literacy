@@ -6,7 +6,7 @@ export default function Lesson6_1_orange() {
   return (
     <div className="space-y-6 text-slate-700 leading-relaxed">
       <p className="text-lg">
-        레슨 6-1에서 배운 <strong>상관계수(r)</strong>와 <strong>산점도</strong>를 오렌지3로 확인해 봅니다. <strong>Correlation</strong> 위젯으로 숫자를 보고, <strong>Scatter Plot</strong>으로 점 분포를 함께 보세요.
+        레슨 6-1에서 배운 <strong>상관계수(r)</strong>와 <strong>Scatter Plot(산점도)</strong>를 오렌지3로 확인해 봅니다. <strong>Correlation</strong> 위젯으로 숫자를 보고, <strong>Scatter Plot</strong>으로 점 분포를 함께 보세요.
       </p>
 
       <InfoBox type="key">
@@ -36,7 +36,7 @@ export default function Lesson6_1_orange() {
         <ol className="list-decimal list-inside space-y-3 text-sm">
           <li>Correlation에서 스마트폰 사용 시간과 수면 시간이 만나는 칸의 숫자(상관계수)는 대략 얼마인가요?</li>
           <li>그 숫자를 보면 "강한 관계 / 보통 / 약한 관계 / 거의 없음" 중 어떤 느낌에 가깝나요?</li>
-          <li>산점도에서 점들이 대체로 어떻게 나열돼 있나요? (오른쪽으로 갈수록 위로 올라가나요, 내려가나요, 아니면 구름처럼만 있나요?)</li>
+          <li><strong>Scatter Plot</strong>에서 점들이 대체로 어떻게 나열돼 있나요? (오른쪽으로 갈수록 위로 올라가나요, 내려가나요, 아니면 구름처럼만 있나요?)</li>
         </ol>
       </ExerciseBlock>
 
