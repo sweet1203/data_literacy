@@ -15,14 +15,14 @@ export default function Lesson5_2_orange() {
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 학년별 비교 → 막대/박스 차트</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>Visualize</strong>에서 <strong>Bar Chart</strong> 위젯을 놓고 Data Table과 연결합니다.</li>
-        <li>Bar Chart 설정에서 <strong>범주(X축)</strong>에 <strong>grade</strong>, <strong>값(Y축)</strong>에 <strong>smartphone_hours</strong>를 선택해 학년별 스마트폰 사용 시간을 막대로 그려 보세요.</li>
-        <li>같은 비교를 <strong>Box Plot</strong>으로도 그려 보세요. <strong>Subgroups</strong>에 <strong>grade</strong>, <strong>연속 변수</strong>에 <strong>smartphone_hours</strong>를 선택합니다. 막대와 박스 중 어떤 것이 “분포까지 보고 싶을 때” 유리한지 느껴 보세요.</li>
+        <li><strong>Visualize</strong>에서 <strong>Bar Plot</strong>(막대 그래프) 위젯을 놓고 <strong>Data Table</strong>과 연결합니다.</li>
+        <li><strong>Bar Plot</strong> 설정에서 <strong>Group by</strong>에 <strong>grade</strong>, <strong>Values</strong>에 <strong>smartphone_hours</strong>, <strong>Color</strong>에 <strong>grade</strong>를 선택해 학년별 스마트폰 사용 시간을 막대로 그려 보세요.</li>
+        <li>같은 비교를 <strong>Box Plot</strong>(박스플롯)으로도 그려 보세요. <strong>Subgroups</strong>에 <strong>grade</strong>, <strong>연속 변수</strong>에 <strong>smartphone_hours</strong>를 선택합니다. 막대와 박스 중 어떤 것이 “분포까지 보고 싶을 때” 유리한지 느껴 보세요.</li>
       </ol>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: 두 수치 관계 → 산점도</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>Scatter Plot</strong>을 놓고 Data Table과 연결합니다.</li>
+        <li><strong>Scatter Plot</strong>을 놓고 <strong>Data Table</strong>과 연결합니다.</li>
         <li>X축에 <strong>sleep_hours</strong>, Y축에 <strong>satisfaction</strong>을 선택해 “수면 시간과 만족도의 관계”를 점으로 확인해 보세요. 레슨 5-2에서 배운 대로 “두 수치형 변수 관계”에는 산점도가 맞습니다.</li>
       </ol>
 
