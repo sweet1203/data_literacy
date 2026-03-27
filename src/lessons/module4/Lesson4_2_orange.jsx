@@ -7,7 +7,7 @@ export default function Lesson4_2_orange() {
     <div className="space-y-6 text-slate-700 leading-relaxed">
       <p className="text-lg">
         레슨 4-2에서 배운 <strong>평균, 중앙값, 퍼짐(Dispersion)</strong>을 오렌지3에서 직접 확인해 봅니다.
-        <strong>Feature Statistics</strong> 위젯과 <strong>Distributions</strong>, <strong>Box Plot</strong>으로 데이터의 대표값과 퍼짐을 살펴 보세요.
+        <strong>Feature Statistics</strong> 위젯과 <strong>Distribution</strong>, <strong>Box Plot</strong>으로 데이터의 대표값과 퍼짐을 살펴 보세요.
       </p>
 
       <InfoBox type="key">
@@ -23,11 +23,11 @@ export default function Lesson4_2_orange() {
         <li><strong>sleep_hours</strong>(수면 시간), <strong>smartphone_hours</strong>(스마트폰 사용 시간)의 평균·중앙값·Dispersion을 확인해 보세요.</li>
       </ol>
 
-      <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: Distributions로 분포 보기</h2>
+      <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: Distribution으로 분포 보기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>Visualize</strong> 그룹에서 <strong>Distributions</strong> 위젯을 캔버스에 놓습니다.</li>
-        <li>Data Table → Distributions로 연결합니다.</li>
-        <li>Distributions를 더블 클릭한 뒤, 왼쪽에서 변수(예: sleep_hours)를 선택하면 <strong>히스토그램(분포)</strong>이 나타납니다. 값이 어떻게 퍼져 있는지 확인하세요.</li>
+        <li><strong>Visualize</strong> 그룹에서 <strong>Distribution</strong> 위젯을 캔버스에 놓습니다.</li>
+        <li>Data Table → Distribution으로 연결합니다.</li>
+        <li>Distribution을 더블 클릭한 뒤, 왼쪽에서 변수(예: sleep_hours)를 선택하면 <strong>히스토그램(분포)</strong>이 나타납니다. 값이 어떻게 퍼져 있는지 확인하세요.</li>
       </ol>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">3단계: Box Plot으로 대표값·퍼짐 보기</h2>

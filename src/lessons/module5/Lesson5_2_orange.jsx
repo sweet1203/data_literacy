@@ -25,9 +25,9 @@ export default function Lesson5_2_orange() {
         <li>X축에 <strong>sleep_hours</strong>, Y축에 <strong>satisfaction</strong>을 선택해 “수면 시간과 만족도의 관계”를 점으로 확인해 보세요. 레슨 5-2에서 배운 대로 “두 수치형 변수 관계”에는 산점도가 맞습니다.</li>
       </ol>
 
-      <h2 className="text-xl font-bold text-slate-800 mt-8">3단계: 한 변수 분포 → Distributions</h2>
+      <h2 className="text-xl font-bold text-slate-800 mt-8">3단계: 한 변수 분포 → Distribution</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>Distributions</strong> 위젯을 놓고 <strong>File</strong>과 연결한 뒤, <strong>satisfaction</strong>(만족도) 분포를 히스토그램으로 그려 보세요. “만족도가 어떻게 퍼져 있는가”를 보는 데는 분포 차트가 적합합니다.</li>
+        <li><strong>Distribution</strong> 위젯을 놓고 <strong>File</strong>과 연결한 뒤, <strong>satisfaction</strong>(만족도) 분포를 히스토그램으로 그려 보세요. “만족도가 어떻게 퍼져 있는가”를 보는 데는 분포 차트가 적합합니다.</li>
       </ol>
 
       <ExerciseBlock title="확인">
