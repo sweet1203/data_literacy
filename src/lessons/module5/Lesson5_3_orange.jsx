@@ -6,11 +6,11 @@ export default function Lesson5_3_orange() {
   return (
     <div className="space-y-6 text-slate-700 leading-relaxed">
       <p className="text-lg">
-        레슨 5-3처럼 <strong>나만의 차트</strong>를 오렌지3에서 만듭니다. 학교 설문 데이터로 <strong>Scatter Plot</strong>, <strong>Box Plot</strong>, <strong>Bar Chart</strong> 중에서 골라 제목과 축을 정해 한 장의 차트를 완성해 보세요.
+        레슨 5-3처럼 <strong>나만의 차트</strong>를 오렌지3에서 만듭니다. 학교 설문 데이터로 <strong>Scatter Plot</strong> 또는 <strong>Bar Plot</strong>을 선택해, 질문에 맞는 제목과 축을 정해 한 장의 차트를 완성해 보세요.
       </p>
 
       <InfoBox type="key">
-        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code> 불러오기, Data Table 연결된 상태에서 시작하세요.
+        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code>를 불러온 뒤, File 위젯을 Scatter Plot 또는 Bar Plot 위젯에 연결하고 시작하세요.
       </InfoBox>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 만들고 싶은 질문 정하기</h2>
@@ -20,10 +20,24 @@ export default function Lesson5_3_orange() {
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: 질문에 맞는 차트 선택하고 그리기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>비교(범주별 값)</strong> → Bar Chart 또는 Box Plot: X축에 범주(학년, 성별), Y축에 수치 변수를 선택합니다.</li>
-        <li><strong>두 수치 관계</strong> → Scatter Plot: X축, Y축에 각각 수치형 변수를 선택합니다.</li>
-        <li>선택한 위젯(Scatter Plot / Box Plot / Bar Chart)을 캔버스에 놓고 Data Table과 연결한 뒤, 축과 변수를 설정합니다.</li>
-        <li>차트 제목은 위젯 더블 클릭 후 제목 설정이 있으면 "나의 질문"에 맞게 바꿔 보세요. (예: "학년별 평균 스마트폰 사용 시간")</li>
+        <li>
+          <strong>먼저 질문의 형태를 확인하세요.</strong> 질문이 "A와 B가 함께 변하나?"처럼 두 수치의 관계를 묻는지, "집단끼리 비교하면 어떤가?"처럼 범주별 비교를 묻는지 구분합니다.
+        </li>
+        <li>
+          <strong>두 수치의 관계를 묻는 질문</strong>은 <strong>Scatter Plot</strong>을 선택합니다. 예: "수면 시간이 길수록 만족도가 높아질까?" X축에는 원인처럼 보고 싶은 수치(수면 시간), Y축에는 결과처럼 보고 싶은 수치(만족도)를 넣습니다.
+        </li>
+        <li>
+          <strong>집단(범주)별 크기 비교 질문</strong>은 <strong>Bar Plot</strong>을 선택합니다. 예: "학년별 평균 스마트폰 사용 시간은 다를까?" X축에는 범주(학년, 성별), Y축에는 비교할 수치(스마트폰 사용 시간)를 넣습니다.
+        </li>
+        <li>
+          같은 질문이라도 변수 선택이 모호하면, "내 질문에 답하려면 어떤 값을 서로 비교해야 하지?"를 먼저 쓰고 그 값에 맞춰 축을 정하세요. 축이 질문 문장과 1:1로 대응되면 적절한 차트를 고른 것입니다.
+        </li>
+        <li>
+          선택한 위젯(Scatter Plot 또는 Bar Plot)을 캔버스에 놓고 <strong>File 위젯과 직접 연결</strong>한 뒤 축과 변수를 설정합니다.
+        </li>
+        <li>
+          차트 제목은 질문이 바로 드러나게 작성하세요. (예: "수면 시간과 만족도의 관계", "학년별 평균 스마트폰 사용 시간")
+        </li>
       </ol>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">3단계: 결과 해석해 보기</h2>
