@@ -10,19 +10,20 @@ export default function Lesson8_2_orange() {
       </p>
 
       <InfoBox type="key">
-        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code> 불러오기, <strong>Data Table</strong> 연결. (Tree는 Data Table(또는 Discretize 출력)에서 연결합니다.) 만족도를 "높음/낮음"처럼 범주로 쓰려면, 오렌지3에서 <strong>Discretize</strong> 등으로 구간을 나누거나, 이미 범주형인 변수(예: grade)를 사용할 수 있습니다. 여기서는 <strong>grade</strong>, <strong>smartphone_hours</strong>, <strong>sleep_hours</strong>를 사용해 <strong>satisfaction</strong>을 예측해 보는 흐름을 안내합니다. (satisfaction이 1~10 수치이면, 7 이상을 "높음", 미만을 "낮음"으로 구간 나누기 가능)
+        <strong>준비</strong>: <strong>File</strong>로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code>를 불러옵니다. <strong>satisfaction</strong>(1~10)을 "높음/낮음" 두 범주로 나눈 뒤, <strong>grade</strong>·<strong>smartphone_hours</strong>·<strong>sleep_hours</strong>로 만족도 범주를 예측하는 트리를 만듭니다.
       </InfoBox>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 목표 변수(클래스) 준비하기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li>오렌지3에서 <strong>satisfaction</strong>을 "높음/낮음" 두 범주로 쓰려면, <strong>Preprocess</strong> 그룹의 <strong>Discretize</strong> 위젯을 씁니다. Data Table → Discretize 연결 후, Discretize에서 <strong>satisfaction</strong> 변수를 선택하고, 구간을 2개로 나눕니다 (예: 1~6 → "낮음", 7~10 → "높음"). 출력을 새 Data Table처럼 사용할 수 있게 합니다.</li>
-        <li>또는 기존 데이터에서 <strong>grade</strong>(학년)를 예측 대상으로 두고, <strong>smartphone_hours</strong>, <strong>sleep_hours</strong>를 입력 변수로 쓸 수도 있습니다. (학년이 범주형이므로 분류 문제가 됩니다.)</li>
+        <li><strong>Preprocess</strong> 그룹의 <strong>Discretize</strong> 위젯을 캔버스에 놓습니다.</li>
+        <li><strong>File → Discretize</strong>로 연결합니다.</li>
+        <li>Discretize를 더블 클릭해 <strong>satisfaction</strong> 변수를 선택하고, 구간을 2개로 나눕니다 (예: 1~6 → "낮음", 7~10 → "높음").</li>
       </ol>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: Tree 위젯으로 분류 모델 만들기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
         <li><strong>Model</strong> 그룹에서 <strong>Tree</strong> 위젯을 찾아 캔버스에 놓습니다.</li>
-        <li>Data Table(또는 Discretize 출력) → Tree로 연결합니다. Tree는 자동으로 <strong>클래스(목표 변수)</strong>를 인식합니다. 목표가 범주형이어야 합니다.</li>
+        <li><strong>Discretize → Tree</strong>로 연결합니다. Tree는 자동으로 <strong>클래스(목표 변수)</strong>를 인식합니다. 목표가 범주형이어야 합니다.</li>
         <li>Tree 위젯을 더블 클릭하면 <strong>의사결정 트리</strong> 그림이 나옵니다. "첫 번째 질문(루트)"이 어떤 변수인지, Yes/No로 어떻게 나뉘는지 확인하세요.</li>
       </ol>
 

@@ -10,22 +10,21 @@ export default function Lesson8_3_orange() {
       </p>
 
       <InfoBox type="key">
-        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code> 불러오기, Data Table 연결된 상태에서 시작하세요.
+        <strong>준비</strong>: <strong>File</strong>로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code>를 불러옵니다.
       </InfoBox>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: Linear Regression 위젯 연결하기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
         <li>왼쪽 위젯 목록에서 <strong>Model</strong> 그룹을 펼칩니다.</li>
         <li><strong>Linear Regression</strong> 위젯을 찾아 캔버스에 놓습니다.</li>
-        <li>Data Table → Linear Regression으로 연결합니다. 오렌지3가 자동으로 변수 중 하나를 <strong>목표 변수(Target)</strong>로 둘 수 있습니다. 목표를 "연속형 수치"(예: satisfaction, sleep_hours)로 두세요.</li>
+        <li><strong>File → Linear Regression</strong>으로 연결합니다. 오렌지3가 자동으로 변수 중 하나를 <strong>목표 변수(Target)</strong>로 둘 수 있습니다. 목표를 "연속형 수치"(예: satisfaction, sleep_hours)로 두세요.</li>
         <li>Linear Regression 위젯을 더블 클릭하면, 어떤 변수가 사용되었는지와 <strong>회귀식(계수)</strong>이 나옵니다. "y = ax + b" 형태의 식을 확인하세요.</li>
       </ol>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: Scatter Plot에서 회귀선 보기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>Scatter Plot</strong>을 <strong>File</strong> 또는 <strong>Data Table</strong>과 연결합니다. 예: X축 <strong>sleep_hours</strong>, Y축 <strong>satisfaction</strong>.</li>
-        <li>Scatter Plot 창에서 <strong>Show regression line</strong>을 클릭해 회귀선을 켭니다. 점 구름과 직선이 얼마나 맞는지 확인하세요. (6-1 오렌지 실습과 같은 방식입니다.)</li>
-        <li>(선택) 사용하는 오렌지3 버전에 따라 <strong>Linear Regression</strong> 위젯 출력을 Scatter Plot에 연결하면 회귀선이 겹쳐 보이기도 합니다.</li>
+        <li><strong>Scatter Plot</strong>을 캔버스에 놓고 <strong>File → Scatter Plot</strong>으로 연결합니다. 예: X축 <strong>sleep_hours</strong>, Y축 <strong>satisfaction</strong>.</li>
+        <li>Scatter Plot 창에서 <strong>Show regression line</strong>을 클릭해 회귀선을 켭니다. 점 구름과 직선이 얼마나 맞는지 확인하세요.</li>
       </ol>
 
       <InfoBox type="tip">

@@ -10,12 +10,12 @@ export default function Lesson6_3_orange() {
       </p>
 
       <InfoBox type="key">
-        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code> 불러오기, Data Table 연결된 상태에서 시작하세요. Box Plot은 <strong>File → Box Plot</strong>으로 직접 연결해도 됩니다.
+        <strong>준비</strong>: <strong>File</strong>로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code>를 불러옵니다. Box Plot은 <strong>File → Box Plot</strong>으로 연결합니다.
       </InfoBox>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 학년별로 나눠 Box Plot 그리기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>Box Plot</strong> 위젯을 놓고 <strong>Data Table</strong> 또는 <strong>File</strong>과 연결합니다.</li>
+        <li><strong>Box Plot</strong> 위젯을 놓고 <strong>File → Box Plot</strong>으로 연결합니다.</li>
         <li>Box Plot 설정에서 <strong>Subgroups(그룹 변수)</strong>에 <strong>grade</strong>를 선택합니다. <strong>연속 변수</strong>에는 <strong>exercise_days</strong>(주당 운동 일수) 또는 <strong>study_hours</strong>를 선택하세요.</li>
         <li>1학년·2학년·3학년별로 박스(중앙값, 사분위)가 어떻게 다른지 비교합니다. "어느 학년의 중앙값이 가장 큰가?", "어느 학년이 가장 퍼져 있는가?"를 비교해 보세요. (이 데이터에서는 박스 밖 점이 거의 없을 수 있어요.)</li>
       </ol>
