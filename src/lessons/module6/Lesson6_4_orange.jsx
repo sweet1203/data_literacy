@@ -10,7 +10,7 @@ export default function Lesson6_4_orange() {
       </p>
 
       <InfoBox type="key">
-        <strong>준비</strong>: 6-1 오렌지 실습처럼 Data Table에 데이터가 연결되어 있고, <strong>Correlation</strong> 또는 <strong>Box Plot</strong>, <strong>Feature Statistics</strong> 중 최소 하나를 이미 연결해 둔 상태에서 시작하세요.
+        <strong>준비</strong>: 6-1 오렌지 실습처럼 <strong>File</strong>로 데이터를 불러 두었고, <strong>Correlation</strong> 또는 <strong>Box Plot</strong>, <strong>Feature Statistics</strong> 중 최소 하나를 이미 연결해 둔 상태에서 시작하세요. (Correlation은 File → Data Table 경로로 연결해 두어도 됩니다.)
       </InfoBox>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 검증할 "결과" 하나 정하기</h2>
@@ -21,7 +21,7 @@ export default function Lesson6_4_orange() {
       <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: 5단계 검증 체크리스트 적용</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
         <li><strong>1단계 숫자 확인</strong>: 표본 수(200명), 사용한 변수 이름이 맞는지 확인했습니다.</li>
-        <li><strong>2단계 시각화 확인</strong>: Scatter Plot·Box Plot 등에서 그 숫자/비교가 실제로 보이는지 확인했습니다.</li>
+        <li><strong>2단계 시각화 확인</strong>: Scatter Plot·Box Plot 등에서 그 숫자/비교가 실제로 보이는지 확인했습니다. (6-1처럼 Scatter Plot은 File에서 연결했을 수도 있습니다.)</li>
         <li><strong>3단계 상식 검증</strong>: "스마트폰 많이 쓰면 수면이 줄 수 있다" 등 상식과 맞는지, 이상한 결론은 아닌지 생각해 봤습니다.</li>
         <li><strong>4단계 민감도</strong>: (가능하면) 이상치를 제거하거나 다른 변수를 넣었을 때 결론이 크게 바뀌는지 생각해 봤습니다.</li>
         <li><strong>5단계 대안</strong>: "다른 변수(제3변수)의 영향은 없을까?"를 한 번이라도 질문해 봤습니다.</li>

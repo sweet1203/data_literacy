@@ -10,7 +10,7 @@ export default function Lesson8_2_orange() {
       </p>
 
       <InfoBox type="key">
-        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code> 불러오기, Data Table 연결. 만족도를 "높음/낮음"처럼 범주로 쓰려면, 오렌지3에서 <strong>Discretize</strong> 등으로 구간을 나누거나, 이미 범주형인 변수(예: grade)를 사용할 수 있습니다. 여기서는 <strong>grade</strong>, <strong>smartphone_hours</strong>, <strong>sleep_hours</strong>를 사용해 <strong>satisfaction</strong>을 예측해 보는 흐름을 안내합니다. (satisfaction이 1~10 수치이면, 7 이상을 "높음", 미만을 "낮음"으로 구간 나누기 가능)
+        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code> 불러오기, <strong>Data Table</strong> 연결. (Tree는 Data Table(또는 Discretize 출력)에서 연결합니다.) 만족도를 "높음/낮음"처럼 범주로 쓰려면, 오렌지3에서 <strong>Discretize</strong> 등으로 구간을 나누거나, 이미 범주형인 변수(예: grade)를 사용할 수 있습니다. 여기서는 <strong>grade</strong>, <strong>smartphone_hours</strong>, <strong>sleep_hours</strong>를 사용해 <strong>satisfaction</strong>을 예측해 보는 흐름을 안내합니다. (satisfaction이 1~10 수치이면, 7 이상을 "높음", 미만을 "낮음"으로 구간 나누기 가능)
       </InfoBox>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: 목표 변수(클래스) 준비하기</h2>

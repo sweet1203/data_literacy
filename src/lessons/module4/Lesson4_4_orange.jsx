@@ -10,12 +10,12 @@ export default function Lesson4_4_orange() {
       </p>
 
       <InfoBox type="key">
-        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code> 불러오기, Data Table 연결된 상태에서 시작하세요.
+        <strong>준비</strong>: File로 <code className="bg-slate-100 px-1 rounded">school_survey_200.csv</code> 불러오기, Data Table 연결된 상태에서 시작하세요. 산점도는 <strong>File → Scatter Plot</strong>으로 직접 연결해도 됩니다.
       </InfoBox>
 
       <h2 className="text-xl font-bold text-slate-800 mt-8">1단계: Scatter Plot(산점도) 그리기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li><strong>Visualize</strong> 그룹에서 <strong>Scatter Plot</strong> 위젯을 캔버스에 놓고 Data Table과 연결합니다.</li>
+        <li><strong>Visualize</strong> 그룹에서 <strong>Scatter Plot</strong> 위젯을 캔버스에 놓고 <strong>Data Table</strong> 또는 <strong>File</strong>과 연결합니다.</li>
         <li>X축에 <strong>smartphone_hours</strong>, Y축에 <strong>sleep_hours</strong>를 선택합니다.</li>
         <li>점들이 대체로 어떤 방향으로 흐르나요? (예: 스마트폰 사용이 많을수록 수면이 적어지는 추세인지, 구름처럼만 있는지) 이걸 <strong>전체 추세</strong>라고 생각하면 됩니다.</li>
       </ol>

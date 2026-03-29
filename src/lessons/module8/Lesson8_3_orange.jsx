@@ -21,9 +21,11 @@ export default function Lesson8_3_orange() {
         <li>Linear Regression 위젯을 더블 클릭하면, 어떤 변수가 사용되었는지와 <strong>회귀식(계수)</strong>이 나옵니다. "y = ax + b" 형태의 식을 확인하세요.</li>
       </ol>
 
-      <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: Scatter Plot에 회귀선 겹쳐 보기 (선택)</h2>
+      <h2 className="text-xl font-bold text-slate-800 mt-8">2단계: Scatter Plot에서 회귀선 보기</h2>
       <ol className="list-decimal list-inside space-y-2 text-sm">
-        <li>일부 버전에서는 Linear Regression의 출력을 <strong>Scatter Plot</strong>에 연결하면 회귀선이 겹쳐 보입니다. 가능하면 "수면 시간(X) → 만족도(Y)" 같은 한 쌍을 선택해 Scatter Plot과 함께 보면서 직선이 어떻게 맞는지 확인해 보세요.</li>
+        <li><strong>Scatter Plot</strong>을 <strong>File</strong> 또는 <strong>Data Table</strong>과 연결합니다. 예: X축 <strong>sleep_hours</strong>, Y축 <strong>satisfaction</strong>.</li>
+        <li>Scatter Plot 창에서 <strong>Show regression line</strong>을 클릭해 회귀선을 켭니다. 점 구름과 직선이 얼마나 맞는지 확인하세요. (6-1 오렌지 실습과 같은 방식입니다.)</li>
+        <li>(선택) 사용하는 오렌지3 버전에 따라 <strong>Linear Regression</strong> 위젯 출력을 Scatter Plot에 연결하면 회귀선이 겹쳐 보이기도 합니다.</li>
       </ol>
 
       <InfoBox type="tip">
