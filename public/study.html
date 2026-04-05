@@ -247,19 +247,6 @@
       font-size: 0.75rem; font-weight: 600; color: white;
     }
 
-    /* ── Checklist ── */
-    .checklist { list-style: none; }
-    .checklist li {
-      display: flex; align-items: flex-start; gap: 10px;
-      padding: 7px 0; border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
-    }
-    .checklist li:last-child { border-bottom: none; }
-    .checklist li::before {
-      content: '□';
-      font-size: 1.1rem; color: var(--sub); flex-shrink: 0; margin-top: -1px;
-    }
-
     /* ── Back to top ── */
     .back-top {
       position: fixed; bottom: 28px; right: 28px;
@@ -331,9 +318,6 @@
 
       /* formula box 배경 유지 */
       .formula-box { background: #0f172a !important; color: #e2e8f0 !important; }
-
-      /* 마지막 체크리스트 카드 */
-      .checklist-card { break-before: page; }
     }
 
     @media (max-width: 640px) {
@@ -1050,32 +1034,6 @@
     </div>
   </div>
 </section>
-
-<!-- ═══════════════════════════════════════
-     최종 요약 카드
-═══════════════════════════════════════ -->
-<div class="card" style="border:2px solid #fcd34d; background:linear-gradient(135deg,#fffbeb,#fef3c7)">
-  <div class="card-title" style="color:#92400e">⭐ 시험 직전 반드시 확인할 핵심 포인트</div>
-  <ul class="checklist">
-    <li>데이터의 3특성: 측정 가능 · 기록 가능 · 분석 가능</li>
-    <li>수치형 vs 범주형 구별: "평균이 의미 있는가?"로 판단 (우편번호·버스 노선 번호 = 범주형)</li>
-    <li>데이터 품질 5기준: 완전성·정확성·일관성·최신성·중복 없음</li>
-    <li>좋은 질문 4조건: 측정 가능·대상 명확·데이터로 답 가능·중립적</li>
-    <li>유도 질문 vs 이중 질문 구별 가능하게</li>
-    <li>표본의 핵심: 크기 + 추출 방법 둘 다 중요</li>
-    <li>편향 3종: 선택(대표성) · 생존자(실패자 누락) · 확인(선택적 수집)</li>
-    <li>생존자 편향 핵심: 데이터에 보이지 않는 '실패 사례'가 더 중요한 단서일 수 있다</li>
-    <li>이상치 있을 때 → 중앙값 사용 (소득, 부동산)</li>
-    <li>표준편차: 클수록 데이터가 넓게 퍼짐 = 성적 들쭉날쭉</li>
-    <li>IQR 이상치: Q1-1.5×IQR ~ Q3+1.5×IQR 범위 이탈 시 이상치</li>
-    <li>차트 선택: 시간→꺾은선 / 비율→원형 / 관계→산점도 / 분포→히스토그램</li>
-    <li>차트 조작: 잘린Y축·체리피킹·3D왜곡·거짓인과관계</li>
-    <li>상관계수 강도: 절댓값으로 비교 (-0.82 > 0.68)</li>
-    <li>상관관계 ≠ 인과관계 (제3 변수 항상 의심하기)</li>
-    <li>민감도 분석 = 이상치 제거해도 결론 유지되는지 확인</li>
-    <li>심슨의 역설 = 전체 경향이 집단 분리 시 역전</li>
-  </ul>
-</div>
 
 </div><!-- /container -->
 

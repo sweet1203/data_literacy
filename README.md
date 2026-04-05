@@ -9,8 +9,8 @@
 
 | 파일 | 위치 | 설명 |
 |------|------|------|
-| `study.html` | `data-literacy-lab-master/` | 시험 대비 요약노트 (Module 1~6, PDF 저장 기능 포함) |
-| `index.html` | `data-literacy-lab-master/` | 메인 앱 진입점 (React SPA) |
+| `study.html` | `public/` | 시험 대비 요약노트 (Module 1~6, PDF 저장 기능 포함). 개발/배포 시 `/study.html` 로 제공 |
+| `index.html` | 프로젝트 루트 | React SPA 진입점 (Vite) |
 
 ### study.html — 시험 대비 요약노트
 
@@ -19,7 +19,7 @@ Module 1-1 ~ 6-4 전 범위를 고등학생 눈높이에 맞게 정리한 단독
 - Module별 색상 구분 및 빠른 이동 버튼
 - 핵심 개념을 표·비교 카드·수식 박스·경고 박스로 시각화
 - 상관계수 r 시각 척도, IQR 이상치 공식, 차트 선택 결정 트리 포함
-- 하단 **시험 직전 최종 체크리스트** 17개 항목
+- 일부 섹션에 **시험 포인트** 요약 박스 포함
 - **PDF 저장 버튼** — 클릭 후 브라우저 인쇄 → "PDF로 저장" 선택
 
 > PDF 출력 시 인쇄 설정에서 **"배경 그래픽 인쇄"** 옵션을 켜야 색상이 유지됩니다.
@@ -57,36 +57,35 @@ Module 1-1 ~ 6-4 전 범위를 고등학생 눈높이에 맞게 정리한 단독
 ```
 data-literacy-project/
 ├── README.md
-└── data-literacy-lab-master/
-    ├── study.html                 # 시험 대비 요약노트 (단독 실행)
-    ├── index.html                 # React 앱 진입점
-    ├── package.json
-    ├── vite.config.js
-    ├── vercel.json
-    ├── public/
-    │   ├── favicon.svg
-    │   └── data/
-    │       ├── school_survey_200.csv   # 학교 설문 샘플 데이터
-    │       └── seoul_temperature.csv  # 서울 기온 시계열 데이터
-    └── src/
-        ├── App.jsx
-        ├── main.jsx
-        ├── data/
-        │   └── lessonRegistry.js      # 모듈·레슨 메타데이터
-        ├── hooks/
-        │   └── usePyodide.js          # Pyodide Python 실행 훅
-        ├── stores/
-        │   └── progressStore.js       # 학습 진도 상태 관리
-        ├── pages/
-        │   ├── Home.jsx
-        │   ├── LessonPage.jsx
-        │   └── TeachingMaterialsPage.jsx
-        ├── components/
-        │   ├── common/                # 재사용 UI 컴포넌트
-        │   ├── layout/                # 앱 레이아웃
-        │   └── interactive/           # 인터랙티브 학습 위젯
-        └── lessons/
-            ├── module1/ ~ module8/    # 레슨 JSX 컴포넌트 (67개)
+├── package.json
+├── vite.config.js
+├── vercel.json
+├── index.html
+├── public/
+│   ├── study.html                 # 시험 대비 요약노트 (/study.html)
+│   ├── favicon.svg
+│   └── data/
+│       ├── school_survey_200.csv   # 학교 설문 샘플 데이터
+│       └── seoul_temperature.csv   # 서울 기온 시계열 데이터
+└── src/
+    ├── App.jsx
+    ├── main.jsx
+    ├── data/
+    │   └── lessonRegistry.js       # 모듈·레슨 메타데이터
+    ├── hooks/
+    │   └── usePyodide.js           # Pyodide Python 실행 훅
+    ├── stores/
+    │   └── progressStore.js        # 학습 진도 상태 관리
+    ├── pages/
+    │   ├── Home.jsx                # 홈(시험대비정리 → /study.html 링크)
+    │   ├── LessonPage.jsx
+    │   └── TeachingMaterialsPage.jsx
+    ├── components/
+    │   ├── common/
+    │   ├── layout/
+    │   └── interactive/
+    └── lessons/
+        └── module1/ ~ module8/     # 레슨 JSX 컴포넌트
 ```
 
 ---
@@ -94,10 +93,9 @@ data-literacy-project/
 ## 🚀 실행 방법
 
 ```bash
-cd data-literacy-lab-master
 npm install
 npm run dev
-# → http://localhost:4010
+# → http://localhost:4010  (홈에서「시험대비정리」또는 http://localhost:4010/study.html)
 ```
 
 ```bash
@@ -105,7 +103,7 @@ npm run build    # 프로덕션 빌드
 npm run preview  # 빌드 결과 미리보기
 ```
 
-> `study.html`은 별도 빌드 없이 브라우저에서 바로 열어 사용할 수 있습니다.
+> `public/study.html`은 개발 서버·배포 시 `/study.html` 경로로 제공됩니다. 로컬에서 파일만 열어도 되지만, 앱과 동일한 URL로 보려면 위 주소를 사용하세요.
 
 ---
 
