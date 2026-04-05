@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>데이터 리터러시 시험 대비 요약노트</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --m1: #3b82f6;
+      --m2: #8b5cf6;
+      --m3: #ef4444;
+      --m4: #f59e0b;
+      --m5: #10b981;
+      --m6: #ec4899;
+      --bg: #f0f4f8;
+      --card: #ffffff;
+      --text: #1e293b;
+      --sub: #64748b;
+      --border: #e2e8f0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* ── Top Header ── */
+    .top-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #2d5f8a 100%);
+      color: white;
+      padding: 52px 24px 40px;
+      text-align: center;
+    }
+    .top-header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .top-header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; }
+    .top-header p  { margin-top: 10px; font-size: 0.95rem; opacity: 0.75; }
+
+    .module-pills {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+      margin-top: 28px;
+    }
+    .module-pills a {
+      padding: 7px 18px; border-radius: 20px;
+      font-size: 0.82rem; font-weight: 600;
+      text-decoration: none; color: white;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .module-pills a:hover { opacity: 0.85; transform: translateY(-2px); }
+    .pill-1 { background: var(--m1); }
+    .pill-2 { background: var(--m2); }
+    .pill-3 { background: var(--m3); }
+    .pill-4 { background: var(--m4); }
+    .pill-5 { background: var(--m5); }
+    .pill-6 { background: var(--m6); }
+
+    /* ── Layout ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    /* ── Module Section ── */
+    .module { margin-bottom: 56px; }
+
+    .module-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 24px; padding-bottom: 14px;
+      border-bottom: 3px solid;
+    }
+    .module-header .num {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 700; color: white; flex-shrink: 0;
+    }
+    .module-header h2 { font-size: 1.25rem; font-weight: 700; }
+    .module-header .sub { font-size: 0.85rem; color: var(--sub); margin-top: 2px; }
+
+    .m1 .module-header { border-color: var(--m1); }
+    .m2 .module-header { border-color: var(--m2); }
+    .m3 .module-header { border-color: var(--m3); }
+    .m4 .module-header { border-color: var(--m4); }
+    .m5 .module-header { border-color: var(--m5); }
+    .m6 .module-header { border-color: var(--m6); }
+
+    .m1 .num { background: var(--m1); }
+    .m2 .num { background: var(--m2); }
+    .m3 .num { background: var(--m3); }
+    .m4 .num { background: var(--m4); }
+    .m5 .num { background: var(--m5); }
+    .m6 .num { background: var(--m6); }
+
+    /* ── Card ── */
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .card-title {
+      font-size: 0.92rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      margin-bottom: 14px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Key Term ── */
+    .term-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .term-item {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 12px 16px;
+      border-left: 4px solid;
+    }
+    .term-item .term-name {
+      font-weight: 700; font-size: 0.93rem; margin-bottom: 4px;
+    }
+    .term-item .term-def {
+      font-size: 0.85rem; color: var(--sub); line-height: 1.6;
+    }
+
+    /* ── Table ── */
+    .study-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.88rem; border-radius: 10px; overflow: hidden;
+    }
+    .study-table th {
+      padding: 10px 14px; text-align: left;
+      font-weight: 600; font-size: 0.82rem;
+      background: #f1f5f9; color: var(--sub);
+      border-bottom: 2px solid var(--border);
+    }
+    .study-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .study-table tr:last-child td { border-bottom: none; }
+    .study-table tr:hover td { background: #fafbfc; }
+
+    /* ── Alert Boxes ── */
+    .alert {
+      border-radius: 10px; padding: 14px 18px;
+      font-size: 0.9rem; margin-top: 14px;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .alert-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .alert-red    { background: #fff1f2; border: 1px solid #fecdd3; color: #9f1239; }
+    .alert-blue   { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
+    .alert-green  { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; }
+    .alert-yellow { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; }
+    .alert-purple { background: #faf5ff; border: 1px solid #ddd6fe; color: #5b21b6; }
+
+    /* ── Comparison ── */
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .compare-item {
+      border-radius: 10px; padding: 14px 16px;
+      border: 1px solid var(--border);
+    }
+    .compare-item .compare-title {
+      font-weight: 700; font-size: 0.9rem; margin-bottom: 8px;
+    }
+    .compare-item ul { padding-left: 16px; font-size: 0.86rem; color: var(--sub); }
+    .compare-item ul li { margin-bottom: 4px; }
+
+    /* ── Formula Box ── */
+    .formula-box {
+      background: #0f172a; color: #e2e8f0;
+      border-radius: 10px; padding: 16px 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem; margin-top: 10px;
+      line-height: 1.9;
+    }
+    .formula-box .comment { color: #64748b; }
+    .formula-box .highlight { color: #7dd3fc; font-weight: 600; }
+
+    /* ── Keyword Tag ── */
+    .tag {
+      display: inline-block;
+      padding: 2px 10px; border-radius: 12px;
+      font-size: 0.78rem; font-weight: 600;
+      margin: 2px;
+    }
+
+    /* ── Steps ── */
+    .steps { counter-reset: step; }
+    .step {
+      display: flex; gap: 14px; align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .step-num {
+      counter-increment: step;
+      min-width: 28px; height: 28px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; font-weight: 700; color: white;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .step-body { font-size: 0.9rem; padding-top: 3px; }
+    .step-body strong { display: block; margin-bottom: 2px; }
+    .step-body span { color: var(--sub); font-size: 0.85rem; }
+
+    /* ── Exam Tip ── */
+    .exam-tip {
+      background: linear-gradient(135deg, #fff7ed, #fef3c7);
+      border: 1.5px solid #fcd34d;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 16px;
+    }
+    .exam-tip-title {
+      font-weight: 700; font-size: 0.88rem;
+      color: #92400e; margin-bottom: 8px;
+    }
+    .exam-tip ul { padding-left: 18px; font-size: 0.87rem; color: #78350f; }
+    .exam-tip ul li { margin-bottom: 5px; }
+
+    /* ── r Scale Visual ── */
+    .r-scale {
+      display: flex; gap: 0; border-radius: 8px; overflow: hidden;
+      margin: 12px 0; height: 36px;
+    }
+    .r-seg {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 600; color: white;
+    }
+
+    /* ── Checklist ── */
+    .checklist { list-style: none; }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 7px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before {
+      content: '□';
+      font-size: 1.1rem; color: var(--sub); flex-shrink: 0; margin-top: -1px;
+    }
+
+    /* ── Back to top ── */
+    .back-top {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 44px; height: 44px;
+      background: #1e3a5f; color: white;
+      border-radius: 50%; border: none;
+      font-size: 1.2rem; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .back-top:hover { background: #0f172a; transform: translateY(-2px); }
+
+    /* ── PDF Button ── */
+    .pdf-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 24px;
+      background: #ffffff; color: #1e3a5f;
+      border: 2px solid rgba(255,255,255,0.6);
+      border-radius: 10px;
+      font-family: inherit; font-size: 0.9rem; font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.15s;
+      text-decoration: none;
+      margin-top: 24px;
+    }
+    .pdf-btn:hover { background: #1e3a5f; color: #ffffff; transform: translateY(-2px); }
+    .pdf-btn svg  { flex-shrink: 0; }
+
+    /* ── Print / PDF 스타일 ── */
+    @media print {
+      /* 화면 전용 요소 숨기기 */
+      .module-pills, .back-top, .pdf-btn { display: none !important; }
+
+      /* 배경·그림자 제거 */
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body  { background: white; font-size: 11pt; }
+
+      /* 헤더 여백 축소 */
+      .top-header { padding: 28px 20px 22px; }
+      .top-header h1 { font-size: 1.5rem; }
+
+      /* 컨테이너 전폭 */
+      .container { max-width: 100%; padding: 20px 16px 40px; }
+
+      /* 카드 그림자 제거 */
+      .card {
+        box-shadow: none !important;
+        border: 1px solid #d1d5db !important;
+        break-inside: avoid;
+        margin-bottom: 12px;
+        padding: 16px 18px;
+      }
+
+      /* 모듈 섹션 페이지 시작 */
+      .module { break-before: page; }
+      .module:first-of-type { break-before: avoid; }
+
+      /* 테이블 페이지 나뉘지 않게 */
+      .study-table { break-inside: avoid; }
+
+      /* 링크 색상 유지 */
+      a { color: inherit; text-decoration: none; }
+
+      /* 비교 그리드 인쇄 폭 조정 */
+      .compare-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .term-grid    { grid-template-columns: 1fr 1fr; gap: 8px; }
+
+      /* formula box 배경 유지 */
+      .formula-box { background: #0f172a !important; color: #e2e8f0 !important; }
+
+      /* 마지막 체크리스트 카드 */
+      .checklist-card { break-before: page; }
+    }
+
+    @media (max-width: 640px) {
+      .top-header h1 { font-size: 1.4rem; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .term-grid    { grid-template-columns: 1fr; }
+      .card { padding: 18px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<div class="top-header" id="top">
+  <div class="badge">시험 대비 요약노트</div>
+  <h1>데이터 리터러시 핵심 정리</h1>
+  <p>Module 1-1 ~ 6-4 전 범위 · 30문항 대비</p>
+  <div class="module-pills">
+    <a href="#m1" class="pill-1">MODULE 1 · 데이터 기초</a>
+    <a href="#m2" class="pill-2">MODULE 2 · 질문 설계</a>
+    <a href="#m3" class="pill-3">MODULE 3 · 표본과 편향</a>
+    <a href="#m4" class="pill-4">MODULE 4 · 데이터 탐색</a>
+    <a href="#m5" class="pill-5">MODULE 5 · 시각화</a>
+    <a href="#m6" class="pill-6">MODULE 6 · 통계와 검증</a>
+  </div>
+  <button class="pdf-btn" onclick="printPDF()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 15V3m0 12-4-4m4 4 4-4"/><rect x="2" y="17" width="20" height="4" rx="1"/>
+    </svg>
+    PDF로 저장하기
+  </button>
+</div>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════
+     MODULE 1 · 데이터 기초
+═══════════════════════════════════════ -->
+<section class="module m1" id="m1">
+  <div class="module-header">
+    <div class="num">1</div>
+    <div>
+      <h2>데이터의 기초</h2>
+      <div class="sub">Lesson 1-1 데이터란? · 1-2 데이터 유형 · 1-3 데이터 품질</div>
+    </div>
+  </div>
+
+  <!-- 1-1 데이터란? -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m1)">1-1 · 데이터란 무엇인가?</div>
+
+    <div class="term-grid">
+      <div class="term-item" style="border-color:var(--m1)">
+        <div class="term-name">데이터(Data)</div>
+        <div class="term-def">관찰·측정으로 수집된 정보.<br>측정 가능 · 기록 가능 · 분석 가능한 것만 데이터다.</div>
+      </div>
+      <div class="term-item" style="border-color:var(--m1)">
+        <div class="term-name">데이터의 3가지 특성</div>
+        <div class="term-def">
+          ① <b>측정 가능</b> — 일관된 기준으로 기록 가능<br>
+          ② <b>기록 가능</b> — 누구나 같은 값 확인 가능<br>
+          ③ <b>분석 가능</b> — 패턴·비교·예측에 활용 가능
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-red" style="margin-top:14px">
+      <div class="alert-icon">⚠️</div>
+      <div><b>데이터 vs 의견 구별법</b><br>
+      "저 가수 노래가 진짜 좋아" → 주관적 의견 (❌데이터 아님)<br>
+      "이 노래 스트리밍 횟수 320만 회" → 측정·기록된 수치 (✅데이터)
+      </div>
+    </div>
+  </div>
+
+  <!-- 1-2 데이터 유형 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m1)">1-2 · 데이터 유형</div>
+
+    <table class="study-table">
+      <thead>
+        <tr><th>유형</th><th>특징</th><th>예시</th><th>평균?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>범주형</b><br><span style="color:var(--sub);font-size:0.8rem">Categorical</span></td>
+          <td>이름·그룹으로 분류<br>계산 불가</td>
+          <td>혈액형, 성별, 좋아하는 색, 우편번호</td>
+          <td style="color:#ef4444;font-weight:700">의미 없음</td>
+        </tr>
+        <tr>
+          <td><b>수치형</b><br><span style="color:var(--sub);font-size:0.8rem">Numerical</span></td>
+          <td>숫자로 표현<br>사칙연산 가능</td>
+          <td>키, 체온, 독서 시간, 월 소득</td>
+          <td style="color:#10b981;font-weight:700">의미 있음</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert alert-yellow" style="margin-top:14px">
+      <div class="alert-icon">💡</div>
+      <div><b>핵심 판단 기준 — "평균을 내면 의미가 있는가?"</b><br>
+      우편번호 03172의 평균 → 의미 없음 → <b>범주형</b><br>
+      버스 노선 번호(472번, 100번)도 숫자지만 → 범주형 (평균 노선 번호는 무의미)
+      </div>
+    </div>
+
+    <div class="alert alert-blue" style="margin-top:10px">
+      <div class="alert-icon">📐</div>
+      <div><b>더 세밀한 분류 (4단계 척도)</b><br>
+      명목 → 순서 → 등간 → 비율 순으로 정밀도 증가<br>
+      명목: 혈액형 · 순서: 만족도 · 등간/비율: 키·온도·점수
+      </div>
+    </div>
+  </div>
+
+  <!-- 1-3 데이터 품질 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m1)">1-3 · 데이터 품질 (5가지 기준)</div>
+
+    <table class="study-table">
+      <thead>
+        <tr><th>기준</th><th>의미</th><th>위반 예시</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>완전성</b></td><td>결측값 없음</td><td>몸무게 칸이 비어있음</td></tr>
+        <tr><td><b>정확성</b></td><td>현실적으로 가능한 값</td><td>몸무게 -5kg</td></tr>
+        <tr><td><b>일관성</b></td><td>동일한 기준으로 기록</td><td>날짜: 2026/01/01 vs Jan 2 vs 1월 3</td></tr>
+        <tr><td><b>최신성</b></td><td>분석 목적에 맞게 최신</td><td>2010년 물가로 2026년 분석</td></tr>
+        <tr><td><b>중복 없음</b></td><td>같은 데이터 반복 없음</td><td>동일 학생 행이 두 번 입력</td></tr>
+      </tbody>
+    </table>
+
+    <div class="alert alert-purple" style="margin-top:14px">
+      <div class="alert-icon">🗑️</div>
+      <div><b>GIGO 원칙 (Garbage In, Garbage Out)</b><br>
+      입력 데이터가 나쁘면 아무리 좋은 분석 도구를 써도 결과는 나쁘다.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MODULE 2 · 데이터 질문 설계
+═══════════════════════════════════════ -->
+<section class="module m2" id="m2">
+  <div class="module-header">
+    <div class="num">2</div>
+    <div>
+      <h2>데이터 질문 설계</h2>
+      <div class="sub">Lesson 2-1 질문 변환 · 2-2 실제 시나리오 · 2-3 질문 품질 평가</div>
+    </div>
+  </div>
+
+  <!-- 좋은 질문의 4요건 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m2)">좋은 데이터 질문의 4가지 조건</div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num" style="background:var(--m2)">1</div>
+        <div class="step-body">
+          <strong>측정 가능한 변수 포함</strong>
+          <span>"하루 독서 시간(분)", "어휘력 점수"처럼 구체적으로 측정 가능해야 한다</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:var(--m2)">2</div>
+        <div class="step-body">
+          <strong>분석 대상 명확</strong>
+          <span>"고등학생", "서울 시민"처럼 누구를 분석하는지 명시</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:var(--m2)">3</div>
+        <div class="step-body">
+          <strong>데이터로 답 가능</strong>
+          <span>주관적 판단이나 가치 판단이 아닌, 데이터로 확인할 수 있어야 한다</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:var(--m2)">4</div>
+        <div class="step-body">
+          <strong>중립적 표현</strong>
+          <span>결론을 미리 가정하거나 특정 답을 유도하지 않는다</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-grid" style="margin-top:16px">
+      <div class="compare-item" style="background:#fff1f2; border-color:#fecdd3">
+        <div class="compare-title" style="color:#9f1239">❌ 나쁜 질문 예시</div>
+        <ul style="color:#9f1239">
+          <li>"SNS는 해로운가?" → 가치판단</li>
+          <li>"왜 요즘 학생들은 책을 안 읽을까?" → why 질문(인과 가정)</li>
+          <li>"기후 변화가 심각한가?" → 기준 없는 주관적 판단</li>
+          <li>"수면을 충분히 취하면 성적이 오르는가?" → '충분히' 기준 없음</li>
+        </ul>
+      </div>
+      <div class="compare-item" style="background:#f0fdf4; border-color:#bbf7d0">
+        <div class="compare-title" style="color:#166534">✅ 좋은 질문 예시</div>
+        <ul style="color:#166534">
+          <li>"고등학생의 하루 독서 시간과 어휘력 점수 사이에 양의 상관관계가 있는가?"</li>
+          <li>"주 4회 이상 운동하는 학생의 체력 점수 평균이 그렇지 않은 학생보다 높은가?"</li>
+          <li>"2016~2025년 한국 청소년의 평균 수면 시간은 감소 추세를 보이는가?"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 설문 설계 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m2)">설문 설계 — 흔한 오류 유형</div>
+
+    <table class="study-table">
+      <thead>
+        <tr><th>오류 유형</th><th>예시</th><th>개선</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>유도 질문</b></td>
+          <td>"우리 학교 도서관이 불편하다고 느끼지 않으신가요?"</td>
+          <td>"우리 학교 도서관에 대해 어떻게 생각하세요?"</td>
+        </tr>
+        <tr>
+          <td><b>이중 질문</b></td>
+          <td>"음악을 좋아하고 악기를 배우고 싶으신가요?"</td>
+          <td>두 가지 질문으로 분리</td>
+        </tr>
+        <tr>
+          <td><b>모호한 표현</b></td>
+          <td>"자주 독서하시나요?"</td>
+          <td>"한 달에 몇 권의 책을 읽으시나요?"</td>
+        </tr>
+        <tr>
+          <td><b>사회적 압력</b></td>
+          <td>"많은 전문가가 권장하는 채식 식단에 관심이 있으신가요?"</td>
+          <td>"채식 식단에 대해 어떻게 생각하세요?"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-tip">
+      <div class="exam-tip-title">📝 시험 포인트</div>
+      <ul>
+        <li>유도 질문: 질문 자체에 방향이 내포된 경우</li>
+        <li>이중 질문: 한 문장에 두 가지 이상을 동시에 묻는 경우</li>
+        <li>"많이/자주/별로" 같은 기준 없는 표현 → 측정 불가 → 나쁜 질문</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MODULE 3 · 표본과 편향
+═══════════════════════════════════════ -->
+<section class="module m3" id="m3">
+  <div class="module-header">
+    <div class="num">3</div>
+    <div>
+      <h2>표본과 편향</h2>
+      <div class="sub">Lesson 3-1 모집단 vs 표본 · 3-2 편향의 종류 · 3-3 설문 설계</div>
+    </div>
+  </div>
+
+  <!-- 모집단 vs 표본 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m3)">3-1 · 모집단 vs 표본</div>
+
+    <div class="term-grid">
+      <div class="term-item" style="border-color:var(--m3)">
+        <div class="term-name">모집단 (Population)</div>
+        <div class="term-def">분석하고자 하는 전체 집단<br>예: 전국 고등학생 130만 명</div>
+      </div>
+      <div class="term-item" style="border-color:var(--m3)">
+        <div class="term-name">표본 (Sample)</div>
+        <div class="term-def">실제 조사한 일부 집단<br>예: 무작위 추출한 1,000명</div>
+      </div>
+    </div>
+
+    <div class="alert alert-red" style="margin-top:14px">
+      <div class="alert-icon">🚨</div>
+      <div><b>표본의 두 가지 핵심 조건</b><br>
+      1. <b>크기</b> — 클수록 안정적 (큰 수의 법칙)<br>
+      2. <b>추출 방법</b> — 무작위(랜덤) 추출이어야 대표성 확보<br>
+      ⚠️ 크기만 크다고 대표성이 보장되지 않는다!
+      </div>
+    </div>
+
+    <div class="alert alert-yellow" style="margin-top:10px">
+      <div class="alert-icon">💡</div>
+      <div><b>온라인 커뮤니티 찬반투표의 함정</b><br>
+      참여자가 수만 명이어도, 해당 커뮤니티에 관심 있는 사람들만 자발적으로 참여 → 선택 편향 발생 → 신뢰 불가
+      </div>
+    </div>
+  </div>
+
+  <!-- 3가지 편향 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m3)">3-2 · 3가지 편향 완전 정리</div>
+
+    <table class="study-table">
+      <thead>
+        <tr><th>편향 종류</th><th>정의</th><th>대표 사례</th><th>키워드</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>선택 편향</b><br>Selection Bias</td>
+          <td>특정 집단만 포함되어 대표성 부족</td>
+          <td>도서관 이용 만족도 조사 → 도서관 방문자만 응답<br>온라인 커뮤니티 투표 → 해당 커뮤니티 회원만 참여</td>
+          <td><span class="tag" style="background:#fee2e2;color:#991b1b">대표성 없음</span></td>
+        </tr>
+        <tr>
+          <td><b>생존자 편향</b><br>Survivorship Bias</td>
+          <td>성공·생존한 것만 보이고 실패·소멸은 안 보임</td>
+          <td>유명 작가 인터뷰로 "글쓰기 비결" 연구 → 출판된 작가만 대상<br>오랜 기업의 경영 방식 연구 → 살아남은 기업만 분석</td>
+          <td><span class="tag" style="background:#fee2e2;color:#991b1b">실패자 누락</span></td>
+        </tr>
+        <tr>
+          <td><b>확인 편향</b><br>Confirmation Bias</td>
+          <td>기존 믿음을 확인하는 정보만 선택적으로 수집</td>
+          <td>특정 학습법 효과를 믿음 → 성공 사례만 검색<br>특정 식품이 몸에 좋다고 믿음 → 긍정 연구만 수집</td>
+          <td><span class="tag" style="background:#fee2e2;color:#991b1b">선택적 수집</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert alert-blue" style="margin-top:14px">
+      <div class="alert-icon">📖</div>
+      <div><b>생존자 편향 — 유명 작가 사례</b><br>
+      출판된 유명 작가 50명을 인터뷰 → "매일 2시간 글쓰기가 성공 비결"이라는 결론<br>
+      → 같은 습관으로 글을 썼지만 <b>출판에 실패한 수천 명</b>은 인터뷰 대상에 없다<br>
+      → 데이터에 잡히지 않은 '실패자'를 고려해야 올바른 결론을 낼 수 있다
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MODULE 4 · 데이터 탐색
+═══════════════════════════════════════ -->
+<section class="module m4" id="m4">
+  <div class="module-header">
+    <div class="num">4</div>
+    <div>
+      <h2>데이터 탐색</h2>
+      <div class="sub">Lesson 4-1 테이블 읽기 · 4-2 기술통계 · 4-3 패턴 발견 · 4-4 이상치</div>
+    </div>
+  </div>
+
+  <!-- 테이블 구조 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m4)">4-1 · 데이터 테이블 구조</div>
+
+    <div class="term-grid">
+      <div class="term-item" style="border-color:var(--m4)">
+        <div class="term-name">행 (Row)</div>
+        <div class="term-def">하나의 관측 단위<br>예: 학생 1명의 전체 정보</div>
+      </div>
+      <div class="term-item" style="border-color:var(--m4)">
+        <div class="term-name">열 (Column)</div>
+        <div class="term-def">하나의 변수<br>예: 모든 학생의 키</div>
+      </div>
+      <div class="term-item" style="border-color:var(--m4)">
+        <div class="term-name">셀 (Cell)</div>
+        <div class="term-def">특정 관측치의 특정 변수값<br>예: 학생1의 키 = 172cm</div>
+      </div>
+    </div>
+
+    <div class="card-title" style="color:var(--m4); margin-top:18px">데이터 탐색 5단계 체크리스트</div>
+    <div class="steps">
+      <div class="step"><div class="step-num" style="background:var(--m4)">1</div><div class="step-body"><strong>크기 확인</strong><span>행 × 열 수 확인 (데이터 규모 파악)</span></div></div>
+      <div class="step"><div class="step-num" style="background:var(--m4)">2</div><div class="step-body"><strong>열 이름·의미 확인</strong><span>각 변수가 무엇을 의미하는지</span></div></div>
+      <div class="step"><div class="step-num" style="background:var(--m4)">3</div><div class="step-body"><strong>데이터 유형 파악</strong><span>수치형 vs 범주형 구분</span></div></div>
+      <div class="step"><div class="step-num" style="background:var(--m4)">4</div><div class="step-body"><strong>기술 통계 확인</strong><span>평균, 중앙값, 표준편차, 최솟값, 최댓값</span></div></div>
+      <div class="step"><div class="step-num" style="background:var(--m4)">5</div><div class="step-body"><strong>이상값·결측값 확인</strong><span>비현실적인 값, 빈 값 탐색</span></div></div>
+    </div>
+  </div>
+
+  <!-- 기술통계 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m4)">4-2 · 기술통계 — 평균 vs 중앙값 vs 표준편차</div>
+
+    <table class="study-table">
+      <thead>
+        <tr><th>통계량</th><th>정의</th><th>장점</th><th>단점</th><th>언제 사용?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>평균</b><br>(Mean)</td>
+          <td>모든 값의 합 ÷ 개수</td>
+          <td>직관적, 계산 쉬움</td>
+          <td>이상치에 민감하게 왜곡</td>
+          <td>이상치 없는 대칭 분포<br>예: 시험점수, 키</td>
+        </tr>
+        <tr>
+          <td><b>중앙값</b><br>(Median)</td>
+          <td>정렬 후 가운데 값</td>
+          <td>이상치에 강건</td>
+          <td>총합 파악 불가</td>
+          <td>이상치 있는 치우친 분포<br>예: 소득, 부동산 가격</td>
+        </tr>
+        <tr>
+          <td><b>표준편차</b><br>(Std Dev)</td>
+          <td>평균으로부터의<br>평균적 거리</td>
+          <td>데이터 퍼짐 파악</td>
+          <td>이상치 영향 받음</td>
+          <td>두 집단 분포 비교<br>예: 반별 성적 편차 비교</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert alert-yellow" style="margin-top:14px">
+      <div class="alert-icon">💡</div>
+      <div><b>평균 vs 중앙값 크기 비교로 분포 유추</b><br>
+      평균 &gt; 중앙값 → 오른쪽에 큰 값 존재 (우측 꼬리 분포)<br>
+      평균 ≈ 중앙값 → 대칭 분포<br>
+      평균 &lt; 중앙값 → 왼쪽에 작은 값 존재 (좌측 꼬리 분포)
+      </div>
+    </div>
+
+    <div class="alert alert-blue" style="margin-top:10px">
+      <div class="alert-icon">📊</div>
+      <div><b>같은 평균, 다른 표준편차</b><br>
+      1반: 평균 82점, SD=3 → 80~84점 사이에 밀집 (성적 고름)<br>
+      2반: 평균 82점, SD=19 → 50~100점 넓게 분포 (성적 들쭉날쭉)
+      </div>
+    </div>
+  </div>
+
+  <!-- 이상치 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m4)">4-4 · 이상치 (Outlier)</div>
+
+    <div class="formula-box">
+      <span class="comment">// IQR 이상치 탐지 공식</span><br>
+      IQR = Q3 - Q1<br>
+      <span class="highlight">하한 = Q1 - 1.5 × IQR</span>   <span class="comment">← 이보다 작으면 이상치</span><br>
+      <span class="highlight">상한 = Q3 + 1.5 × IQR</span>   <span class="comment">← 이보다 크면 이상치</span>
+    </div>
+
+    <div class="alert alert-red" style="margin-top:14px">
+      <div class="alert-icon">🚨</div>
+      <div><b>이상치 처리 원칙 — "절대 무조건 삭제 금지"</b><br>
+      1단계: 이상치 발생 <b>원인 파악</b><br>
+      2단계: <b>데이터 오류</b>인지 <b>실제 값</b>인지 판단<br>
+      3단계: 처리 방법 결정 (삭제/별도 분석/전문가 확인)<br>
+      4단계: 처리 방법을 <b>투명하게 보고</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MODULE 5 · 데이터 시각화
+═══════════════════════════════════════ -->
+<section class="module m5" id="m5">
+  <div class="module-header">
+    <div class="num">5</div>
+    <div>
+      <h2>데이터 시각화</h2>
+      <div class="sub">Lesson 5-1 차트 읽기 · 5-2 차트 선택 · 5-3 차트 만들기 · 5-4 차트 조작</div>
+    </div>
+  </div>
+
+  <!-- 차트 유형 선택 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m5)">5-1~5-2 · 5가지 차트 유형 & 선택 기준</div>
+
+    <table class="study-table">
+      <thead>
+        <tr><th>차트</th><th>언제 사용?</th><th>예시</th><th>주의</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>막대 차트</b></td>
+          <td>범주형 항목 간 크기 비교</td>
+          <td>과목별 평균 점수</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><b>꺾은선 차트</b></td>
+          <td>시간에 따른 변화</td>
+          <td>연도별 기온 변화</td>
+          <td>시간 축 필수</td>
+        </tr>
+        <tr>
+          <td><b>원형 차트</b></td>
+          <td>전체 대비 비율·구성</td>
+          <td>교통수단 이용 비율</td>
+          <td>5~6개 항목 이하만</td>
+        </tr>
+        <tr>
+          <td><b>산점도</b></td>
+          <td>두 수치형 변수의 관계</td>
+          <td>키 vs 50m 달리기 기록</td>
+          <td>두 변수 모두 수치형</td>
+        </tr>
+        <tr>
+          <td><b>히스토그램</b></td>
+          <td>하나의 수치형 변수 분포</td>
+          <td>수학 점수 분포</td>
+          <td>막대 차트와 혼동 주의</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert alert-yellow" style="margin-top:14px">
+      <div class="alert-icon">🎯</div>
+      <div><b>차트 선택 결정 트리</b><br>
+      시간 변화? → 꺾은선 / 비율·구성? → 원형 (≤5개)<br>
+      두 수치형 관계? → 산점도 / 하나의 수치형 분포? → 히스토그램<br>
+      범주형 비교? → 막대 차트
+      </div>
+    </div>
+  </div>
+
+  <!-- 차트 조작 4가지 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m5)">5-4 · 차트 조작 4가지 기법 (반드시 암기!)</div>
+
+    <table class="study-table">
+      <thead>
+        <tr><th>조작 기법</th><th>방법</th><th>탐지법</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>잘린 Y축</b></td>
+          <td>Y축을 0이 아닌 중간값에서 시작<br>→ 작은 차이가 크게 보임</td>
+          <td>Y축이 0에서 시작하는지 확인</td>
+        </tr>
+        <tr>
+          <td><b>체리 피킹</b></td>
+          <td>유리한 기간·항목만 선택해 표시<br>→ 나머지 데이터 숨김</td>
+          <td>전체 기간·범위가 표시됐는지 확인</td>
+        </tr>
+        <tr>
+          <td><b>시각적 왜곡</b></td>
+          <td>3D 효과, 파이 조각 분리로 크기 왜곡<br>→ 실제보다 크거나 작아 보임</td>
+          <td>수치 직접 확인, 3D 효과 주의</td>
+        </tr>
+        <tr>
+          <td><b>거짓 인과관계</b></td>
+          <td>상관관계를 인과관계처럼 제시</td>
+          <td>"제3의 변수는 없는가?" 질문</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="exam-tip">
+      <div class="exam-tip-title">📝 차트 검증 6가지 체크리스트</div>
+      <ul>
+        <li>Y축이 0에서 시작하는가?</li>
+        <li>전체 기간이 표시되어 있는가?</li>
+        <li>3D나 특수 시각 효과가 없는가?</li>
+        <li>상관관계를 인과관계로 해석하지 않았는가?</li>
+        <li>축 간격이 균일한가?</li>
+        <li>출처와 조사 방법이 명시되어 있는가?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MODULE 6 · 통계적 개념과 검증
+═══════════════════════════════════════ -->
+<section class="module m6" id="m6">
+  <div class="module-header">
+    <div class="num">6</div>
+    <div>
+      <h2>통계적 개념과 검증</h2>
+      <div class="sub">Lesson 6-1 상관계수 · 6-2 상관 vs 인과 · 6-3 집단 비교 · 6-4 결과 검증</div>
+    </div>
+  </div>
+
+  <!-- 상관계수 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m6)">6-1 · 상관계수 r</div>
+
+    <div class="r-scale">
+      <div class="r-seg" style="background:#1d4ed8; flex:1">-1</div>
+      <div class="r-seg" style="background:#3b82f6; flex:0.8">강한 음</div>
+      <div class="r-seg" style="background:#93c5fd; color:#1e40af; flex:0.6">중간 음</div>
+      <div class="r-seg" style="background:#ddd6fe; color:#5b21b6; flex:0.4">약한 음</div>
+      <div class="r-seg" style="background:#e2e8f0; color:#475569; flex:0.4">0 (무관)</div>
+      <div class="r-seg" style="background:#fde68a; color:#92400e; flex:0.4">약한 양</div>
+      <div class="r-seg" style="background:#fca5a5; color:#991b1b; flex:0.6">중간 양</div>
+      <div class="r-seg" style="background:#ef4444; flex:0.8">강한 양</div>
+      <div class="r-seg" style="background:#991b1b; flex:1">+1</div>
+    </div>
+
+    <table class="study-table" style="margin-top:4px">
+      <thead>
+        <tr><th>절댓값 범위</th><th>해석</th><th>예시 r값</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>|r| > 0.7</td><td><b>강한 상관관계</b></td><td>r = 0.89, r = -0.75</td></tr>
+        <tr><td>0.4 &lt; |r| ≤ 0.7</td><td><b>중간 상관관계</b></td><td>r = 0.58, r = -0.62</td></tr>
+        <tr><td>0.2 &lt; |r| ≤ 0.4</td><td><b>약한 상관관계</b></td><td>r = 0.31</td></tr>
+        <tr><td>|r| ≤ 0.2</td><td><b>거의 없음</b></td><td>r = 0.12, r = -0.07</td></tr>
+      </tbody>
+    </table>
+
+    <div class="alert alert-red" style="margin-top:14px">
+      <div class="alert-icon">🚨</div>
+      <div><b>상관계수 강도는 절댓값으로 비교!</b><br>
+      r = -0.75 vs r = 0.62 → |-0.75| = 0.75 &gt; 0.62 → <b>-0.75가 더 강한 상관관계</b>
+      </div>
+    </div>
+  </div>
+
+  <!-- 상관 vs 인과 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m6)">6-2 · 상관관계 vs 인과관계 (가장 중요!)</div>
+
+    <div class="compare-grid">
+      <div class="compare-item" style="background:#fdf4ff; border-color:#e9d5ff">
+        <div class="compare-title" style="color:#6b21a8">상관관계 (Correlation)</div>
+        <ul style="color:#6b21a8">
+          <li>두 변수가 함께 변하는 패턴</li>
+          <li>r값으로 측정 가능</li>
+          <li>관찰만으로 확인 가능</li>
+          <li>원인-결과 아님</li>
+        </ul>
+      </div>
+      <div class="compare-item" style="background:#fff7ed; border-color:#fed7aa">
+        <div class="compare-title" style="color:#c2410c">인과관계 (Causation)</div>
+        <ul style="color:#c2410c">
+          <li>X가 실제로 Y를 일으킴</li>
+          <li>실험·통제 연구 필요</li>
+          <li>단순 관찰로 증명 불가</li>
+          <li>시간적 선행 필요 (원인이 먼저)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alert alert-red" style="margin-top:14px">
+      <div class="alert-icon">❄️</div>
+      <div><b>핵심 원칙 — "상관관계 ≠ 인과관계"</b><br>
+      r이 아무리 높아도 인과관계를 보장하지 않는다.
+      </div>
+    </div>
+
+    <div class="card-title" style="color:var(--m6); margin-top:18px">대표적 허위 상관 사례 (제3 변수 문제)</div>
+    <table class="study-table">
+      <thead>
+        <tr><th>변수 A</th><th>변수 B</th><th>r값</th><th>진짜 원인 (제3 변수)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>선글라스 판매량 ↑</td><td>자외선 화상 환자 ↑</td><td>r = 0.83</td><td><b>여름 기온(햇볕)</b></td></tr>
+        <tr><td>발 크기 ↑</td><td>어휘력 점수 ↑</td><td>양의 상관</td><td><b>나이(성장)</b></td></tr>
+        <tr><td>도시 경찰관 수 ↑</td><td>범죄 건수 ↑</td><td>양의 상관</td><td><b>도시 인구 규모</b></td></tr>
+      </tbody>
+    </table>
+
+    <div class="alert alert-purple" style="margin-top:14px">
+      <div class="alert-icon">🔀</div>
+      <div><b>심슨의 역설 (Simpson's Paradox)</b><br>
+      전체 데이터에서 나타난 경향이, 집단을 나눠 보면 <b>반대로</b> 나타나는 현상<br>
+      → 항상 집단별로도 분석해봐야 한다
+      </div>
+    </div>
+  </div>
+
+  <!-- 검증 5단계 -->
+  <div class="card">
+    <div class="card-title" style="color:var(--m6)">6-4 · 분석 결과 검증 5단계</div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num" style="background:var(--m6)">1</div>
+        <div class="step-body">
+          <strong>수치 확인 (Numbers Check)</strong>
+          <span>데이터 크기와 통계량이 정확한가?</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:var(--m6)">2</div>
+        <div class="step-body">
+          <strong>시각화 확인 (Visualization Check)</strong>
+          <span>차트가 데이터를 정확하게 반영하고 있는가?</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:var(--m6)">3</div>
+        <div class="step-body">
+          <strong>상식 확인 (Sense Check)</strong>
+          <span>결과가 현실적으로 말이 되는가? 도메인 지식과 일치하는가?</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:var(--m6)">4</div>
+        <div class="step-body">
+          <strong>민감도 분석 (Sensitivity Analysis)</strong>
+          <span>이상치를 제거하거나 기간을 바꿔도 결론이 유지되는가?</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:var(--m6)">5</div>
+        <div class="step-body">
+          <strong>대안 분석 (Alternative Analysis)</strong>
+          <span>다른 분석 방법을 써도 같은 결론이 나오는가?</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exam-tip">
+      <div class="exam-tip-title">📝 시험 포인트 — 각 단계의 핵심 질문</div>
+      <ul>
+        <li>민감도 분석: "이상치를 제거해도 결론이 유지되는가?"</li>
+        <li>대안 분석: "다른 집단별로 나눠도 같은 경향인가?"</li>
+        <li>상식 확인: "이 결과가 현실에서 납득 가능한가?"</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     최종 요약 카드
+═══════════════════════════════════════ -->
+<div class="card" style="border:2px solid #fcd34d; background:linear-gradient(135deg,#fffbeb,#fef3c7)">
+  <div class="card-title" style="color:#92400e">⭐ 시험 직전 반드시 확인할 핵심 포인트</div>
+  <ul class="checklist">
+    <li>데이터의 3특성: 측정 가능 · 기록 가능 · 분석 가능</li>
+    <li>수치형 vs 범주형 구별: "평균이 의미 있는가?"로 판단 (우편번호·버스 노선 번호 = 범주형)</li>
+    <li>데이터 품질 5기준: 완전성·정확성·일관성·최신성·중복 없음</li>
+    <li>좋은 질문 4조건: 측정 가능·대상 명확·데이터로 답 가능·중립적</li>
+    <li>유도 질문 vs 이중 질문 구별 가능하게</li>
+    <li>표본의 핵심: 크기 + 추출 방법 둘 다 중요</li>
+    <li>편향 3종: 선택(대표성) · 생존자(실패자 누락) · 확인(선택적 수집)</li>
+    <li>생존자 편향 핵심: 데이터에 보이지 않는 '실패 사례'가 더 중요한 단서일 수 있다</li>
+    <li>이상치 있을 때 → 중앙값 사용 (소득, 부동산)</li>
+    <li>표준편차: 클수록 데이터가 넓게 퍼짐 = 성적 들쭉날쭉</li>
+    <li>IQR 이상치: Q1-1.5×IQR ~ Q3+1.5×IQR 범위 이탈 시 이상치</li>
+    <li>차트 선택: 시간→꺾은선 / 비율→원형 / 관계→산점도 / 분포→히스토그램</li>
+    <li>차트 조작: 잘린Y축·체리피킹·3D왜곡·거짓인과관계</li>
+    <li>상관계수 강도: 절댓값으로 비교 (-0.82 > 0.68)</li>
+    <li>상관관계 ≠ 인과관계 (제3 변수 항상 의심하기)</li>
+    <li>민감도 분석 = 이상치 제거해도 결론 유지되는지 확인</li>
+    <li>심슨의 역설 = 전체 경향이 집단 분리 시 역전</li>
+  </ul>
+</div>
+
+</div><!-- /container -->
+
+<!-- Back to top -->
+<a href="#top" class="back-top" title="맨 위로">↑</a>
+
+<script>
+  function printPDF() {
+    // 인쇄 전 타이틀을 파일명으로 활용
+    const prev = document.title;
+    document.title = '데이터리터러시_요약노트';
+    window.print();
+    document.title = prev;
+  }
+</script>
+
+</body>
+</html>
