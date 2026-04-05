@@ -1,7 +1,7 @@
 # 데이터 리터러시 랩 (Data Literacy Lab)
 
 **고등학생 대상 데이터 리터러시 교육 플랫폼** — 8개 모듈, 30개 레슨으로 구성된 인터랙티브 학습 프로젝트입니다.
-시험 대비 요약노트(`study.html`)와 모의고사(`test.html`)를 포함합니다.
+시험 대비 요약노트(`study.html`)를 포함합니다.
 
 ---
 
@@ -10,7 +10,6 @@
 | 파일 | 위치 | 설명 |
 |------|------|------|
 | `study.html` | `data-literacy-lab-master/` | 시험 대비 요약노트 (Module 1~6, PDF 저장 기능 포함) |
-| `test.html` | `data-literacy-lab-master/` | 30문항 객관식 모의고사 (5지선다, 정답·해설 포함) |
 | `index.html` | `data-literacy-lab-master/` | 메인 앱 진입점 (React SPA) |
 
 ### study.html — 시험 대비 요약노트
@@ -24,13 +23,6 @@ Module 1-1 ~ 6-4 전 범위를 고등학생 눈높이에 맞게 정리한 단독
 - **PDF 저장 버튼** — 클릭 후 브라우저 인쇄 → "PDF로 저장" 선택
 
 > PDF 출력 시 인쇄 설정에서 **"배경 그래픽 인쇄"** 옵션을 켜야 색상이 유지됩니다.
-
-### test.html — 모의고사
-
-Module 1~6 범위 30문항 5지선다 시험지입니다. 별도 서버 없이 브라우저에서 바로 사용 가능합니다.
-
-- 정답 및 해설이 텍스트로 포함되어 있어 한글(HWP) 등에 붙여넣기 편리
-- 모듈별 5문항씩 균등 배분
 
 ---
 
@@ -67,7 +59,6 @@ data-literacy-project/
 ├── README.md
 └── data-literacy-lab-master/
     ├── study.html                 # 시험 대비 요약노트 (단독 실행)
-    ├── test.html                  # 30문항 모의고사 (단독 실행)
     ├── index.html                 # React 앱 진입점
     ├── package.json
     ├── vite.config.js
@@ -114,7 +105,7 @@ npm run build    # 프로덕션 빌드
 npm run preview  # 빌드 결과 미리보기
 ```
 
-> `study.html`과 `test.html`은 별도 빌드 없이 브라우저에서 바로 열어 사용할 수 있습니다.
+> `study.html`은 별도 빌드 없이 브라우저에서 바로 열어 사용할 수 있습니다.
 
 ---
 
