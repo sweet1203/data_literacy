@@ -62,6 +62,13 @@ export default function Home() {
             <span>·</span>
             <span className="inline-flex items-center gap-1"><Icon name="timer" size={16} className="text-slate-400" /> 약 {Math.round(modules.reduce((s, m) => s + m.lessons.reduce((ls, l) => ls + l.duration, 0), 0) / 60)}시간</span>
           </div>
+          <a
+            href="/study.html"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-accent-200 bg-accent-50 text-accent-800 hover:bg-accent-100 hover:border-accent-300 transition-colors font-medium"
+          >
+            <Icon name="memo" size={16} className="text-accent-600" />
+            시험대비정리
+          </a>
           <button
             type="button"
             onClick={() => setDownloadOpen((o) => !o)}
