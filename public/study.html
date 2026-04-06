@@ -973,11 +973,98 @@
       </tbody>
     </table>
 
-    <div class="alert alert-purple" style="margin-top:14px">
+    <div class="card-title" style="color:var(--m6); margin-top:22px">심슨의 역설 (Simpson's Paradox)</div>
+    <div style="font-size:0.9rem;line-height:1.8;color:var(--text);margin-bottom:14px">
+      심슨의 역설은 통계에서 아주 유명하고 재미있는 착시 현상입니다. 한마디로 요약하면 <b>전체 평균을 볼 때</b>와 <b>그룹별로 쪼개서 볼 때</b>의 결과가 완전히 뒤바뀌거나, 겉으로 보이는 순위가 달라지는 현상을 말합니다.<br><br>
+      이름은 거창하지만, 예시를 보면 금방 이해할 수 있습니다. 가장 널리 쓰이는 <b>「어느 병원에 가야 할까?」</b> 예시로 설명해 보겠습니다.
+    </div>
+
+    <div class="card-title" style="color:var(--m6); margin-top:16px;font-size:0.95rem">🏥 예시: A병원과 B병원, 어디가 더 수술을 잘할까?</div>
+    <div style="font-size:0.88rem;line-height:1.75;color:var(--sub);margin-bottom:12px">
+      수술을 받아야 해서 두 병원의 최근 수술 생존율을 찾아봤다고 가정해 봅시다. 아래 숫자는 <b>전체·중증·경증이 서로 합이 맞도록</b> 맞춘 예시입니다. (각 병원 모두 수술 1,000명 기준)
+    </div>
+    <table class="study-table">
+      <thead>
+        <tr><th>구분</th><th>전체 생존율</th><th>생존 인원 / 전체</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>A 병원</b></td><td>82%</td><td>820명 / 1,000명</td></tr>
+        <tr><td><b>B 병원</b></td><td>95%</td><td>950명 / 1,000명</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:0.9rem;line-height:1.8;color:var(--text);margin:12px 0 16px">
+      전체 통계만 보면 B 병원 생존율이 <b>압도적으로 높습니다</b>. 그런데 환자를 <b>중증</b>(수술이 어려운 환자)과 <b>경증</b>(수술이 쉬운 환자)으로 나눠 보면 이야기가 달라집니다.
+    </div>
+
+    <div class="card-title" style="color:var(--m6); margin-top:8px;font-size:0.95rem">🕵️ 환자 상태에 따른 생존율 비교</div>
+    <table class="study-table" style="margin-top:10px">
+      <thead>
+        <tr><th>병원</th><th>중증 (생존/전체)</th><th>중증 생존율</th><th>경증 (생존/전체)</th><th>경증 생존율</th><th>검산 (중증+경증)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>A</b></td>
+          <td>715 / 894명</td>
+          <td><b>79.98%</b></td>
+          <td>105 / 106명</td>
+          <td><b>99.06%</b></td>
+          <td>715+105 = <b>820</b>명 ✓</td>
+        </tr>
+        <tr>
+          <td><b>B</b></td>
+          <td>75 / 107명</td>
+          <td><b>70.09%</b></td>
+          <td>875 / 893명</td>
+          <td><b>97.98%</b></td>
+          <td>75+875 = <b>950</b>명 ✓</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="font-size:0.84rem;line-height:1.65;color:var(--sub);margin:10px 0 12px">
+      인원 합계: A는 894+106 = 1,000명, B는 107+893 = 1,000명 · 전체 생존율 820÷1,000 = 82%, 950÷1,000 = 95%
+    </div>
+    <div class="compare-grid" style="margin-top:4px">
+      <div class="compare-item" style="background:#faf5ff;border-color:#ddd6fe">
+        <div class="compare-title" style="color:#5b21b6">1. 중증 환자</div>
+        <div style="font-size:0.86rem;color:#5b21b6;line-height:1.65">
+          79.98% (A) &gt; 70.09% (B) → <b>A 병원</b>이 더 잘 살렸습니다.
+        </div>
+      </div>
+      <div class="compare-item" style="background:#eff6ff;border-color:#bfdbfe">
+        <div class="compare-title" style="color:#1e40af">2. 경증 환자</div>
+        <div style="font-size:0.86rem;color:#1e40af;line-height:1.65">
+          99.06% (A) &gt; 97.98% (B) → <b>A 병원</b>이 더 잘 살렸습니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-yellow" style="margin-top:16px">
+      <div class="alert-icon">🤔</div>
+      <div><b>이상하지 않나요?</b><br>
+      중증·경증 <b>모든 유형에서 A 병원 생존율이 더 높은데</b>, 전체 1,000명 기준으로는 B(95%)가 A(82%)보다 훨씬 높게 보입니다. 환자 구성(중증 비율)이 다르기 때문입니다.
+      </div>
+    </div>
+
+    <div class="card-title" style="color:var(--m6); margin-top:18px;font-size:0.95rem">💡 왜 이런 역설이 발생할까요?</div>
+    <div style="font-size:0.9rem;line-height:1.8;color:var(--text);margin-bottom:12px">
+      비밀은 <b>환자의 비율</b>, 즉 데이터 안에 숨은 <b>집단 구성(중증도)</b>이라는 변수에 있습니다.
+    </div>
+    <ul style="font-size:0.88rem;line-height:1.75;color:var(--text);padding-left:20px;margin:0 0 14px">
+      <li style="margin-bottom:8px"><b>A 병원</b>은 큰 대학병원이라 수술이 어렵고 사망 위험이 큰 <b>중증 환자 비율이 훨씬 높습니다</b>. 아무리 수술을 잘해도 어려운 케이스가 많이 몰리면 <b>전체 생존율 평균이 깎여</b> 보입니다.</li>
+      <li><b>B 병원</b>은 작은 동네 병원이라 <b>경증 환자가 대부분</b>입니다. 원래 살 확률이 높은 환자만 많이 수술하면 <b>전체 생존율이 올라가</b> 보입니다.</li>
+    </ul>
+    <div class="alert alert-purple" style="margin-top:4px">
       <div class="alert-icon">🔀</div>
-      <div><b>심슨의 역설 (Simpson's Paradox)</b><br>
-      전체 데이터에서 나타난 경향이, 집단을 나눠 보면 <b>반대로</b> 나타나는 현상<br>
-      → 항상 집단별로도 분석해봐야 한다
+      <div><b>정리하면 심슨의 역설이란</b><br>
+      이렇게 <b>숨겨진 집단(중증도 등)을 무시한 채</b> 전체 합계·평균만 뭉뚱그려 비교하면 <b>잘못된 결론</b>에 빠질 수 있다는 뜻입니다. → <b>항상 집단별로도 나누어 분석</b>해야 합니다.
+      </div>
+    </div>
+
+    <div class="exam-tip" style="margin-top:18px">
+      <div class="exam-tip-title">📊 결론 및 시사점</div>
+      <div style="font-size:0.87rem;line-height:1.75;color:#78350f">
+        심슨의 역설이 주는 교훈은 분명합니다. <b>전체 평균·만족도·합격률만 보고 섣불리 결론 내리면 안 된다</b>는 것입니다.<br><br>
+        뉴스나 광고에서 「우리 제품 전체 만족도 90%!」「이 학교 평균 합격률이 최고!」처럼 말할 때, 그 이면을 <b>연령·지역·난이도·상황</b> 등으로 나누어 보면 전혀 다른 그림이 나올 수 있다는 점을 항상 염두에 두어야 합니다.
       </div>
     </div>
   </div>
